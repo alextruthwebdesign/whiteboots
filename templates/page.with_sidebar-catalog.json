@@ -8,14 +8,40 @@
         "padding_bottom": 28
       }
     },
-    "78be3652-7446-42c1-8cf0-35614d9bbe1a": {
-      "type": "featured-blog",
+    "c32d5fd2-91c2-4136-9c00-d8c8f628b7ee": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20996815847722__c32d5fd2-91c2-4136-9c00-d8c8f628b7ee-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Catalog<\/h2>",
+            "heading_size": "h1",
+            "right_text": ""
+          }
+        },
+        "template--20996815847722__c32d5fd2-91c2-4136-9c00-d8c8f628b7ee-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Interested in receiving our digital catalog? Fill out the form below and we’ll email you a copy right away.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20996815847722__c32d5fd2-91c2-4136-9c00-d8c8f628b7ee-heading-1",
+        "template--20996815847722__c32d5fd2-91c2-4136-9c00-d8c8f628b7ee-text-1"
+      ],
       "settings": {
-        "heading": "THE WHITE'S DAILY",
-        "heading_size": "h2",
-        "blogs": "",
-        "post_limit": 3,
-        "columns_desktop": 3,
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "full_width": true,
+        "small_width": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "897d79d0-f077-481e-9587-25e0bde16443": {
+      "type": "catalog-form",
+      "settings": {
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -23,6 +49,7 @@
   },
   "order": [
     "main",
-    "78be3652-7446-42c1-8cf0-35614d9bbe1a"
+    "c32d5fd2-91c2-4136-9c00-d8c8f628b7ee",
+    "897d79d0-f077-481e-9587-25e0bde16443"
   ]
 }

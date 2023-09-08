@@ -14,7 +14,9 @@
   justify-content: center;
   margin-bottom: 1rem;
 }
-
+.rich-text .rich-text__blocks.left .header-block {
+  justify-content: normal;
+}
 .rich-text .header-block.with-right {
   justify-content: space-between;
 }
