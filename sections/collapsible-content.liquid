@@ -1,0 +1,108 @@
+<div class="faq-container">
+  {%- if section.settings.caption != blank -%}
+  <h2 class="heading">{{ section.settings.caption }}</h2>
+  {% endif %}
+  
+  <div class="faq-block" id="returns">
+    <div class="faq-module">
+      {%- if section.settings.heading != blank -%}
+      <h2 class="heading-secondary">{{ section.settings.heading }}</h2>
+      {% endif %}
+      <div class="faq-wrapper">
+        {%- for block in section.blocks -%}
+        <details
+          class="item"
+          id="Details-{{ block.id }}-{{ section.id }}"
+          {% if section.settings.open_first_collapsible_row and forloop.first %}
+            open
+          {% endif %}
+        >
+          <summary id="Summary-{{ block.id }}-{{ section.id }}" class="question">
+            <svg version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 8 8" style="enable-background:new 0 0 8 8;" xml:space="preserve"> <polygon class="st0" points="4,8 4,8 0,0 8,0 "></polygon></svg>
+            <p class="title">{{ block.settings.heading | default: block.settings.page.title }}</p>
+          </summary>
+          <div
+            class="answer"
+            id="CollapsibleAccordion-{{ block.id }}-{{ section.id }}"
+            role="region"
+            aria-labelledby="Summary-{{ block.id }}-{{ section.id }}"
+          >
+            <div class="copy" style="--tooltip-height:99px">
+              {{ block.settings.row_content }}
+            </div>
+          </div>
+        </details>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.collapsible_content.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "t:sections.collapsible_content.settings.caption.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.collapsible_content.settings.heading.label",
+      "default": "Collapsible content"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first_collapsible_row",
+      "default": false,
+      "label": "t:sections.collapsible_content.settings.open_first_collapsible_row.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collapsible_row",
+      "name": "t:sections.collapsible_content.blocks.collapsible_row.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Collapsible row",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.label",
+          "info": "t:sections.collapsible_content.blocks.collapsible_row.settings.heading.info"
+        },
+        {
+          "type": "richtext",
+          "id": "row_content",
+          "label": "t:sections.collapsible_content.blocks.collapsible_row.settings.row_content.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.collapsible_content.presets.name",
+      "blocks": [
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        },
+        {
+          "type": "collapsible_row"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

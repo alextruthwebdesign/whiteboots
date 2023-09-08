@@ -1,0 +1,289 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "65fff80c-0a5f-4c74-82ff-7e174fc10d13": {
+      "type": "icon-links",
+      "blocks": {
+        "template--18945828979005__65fff80c-0a5f-4c74-82ff-7e174fc10d13-1683280825656e191d-0": {
+          "type": "icon_links",
+          "settings": {
+            "title": "Returns",
+            "icon": "shopify:\/\/shop_images\/return.svg",
+            "url": "#"
+          }
+        },
+        "template--18945828979005__65fff80c-0a5f-4c74-82ff-7e174fc10d13-1683280825656e191d-1": {
+          "type": "icon_links",
+          "settings": {
+            "title": "Repairs",
+            "icon": "shopify:\/\/shop_images\/repairs.svg",
+            "url": "#"
+          }
+        },
+        "template--18945828979005__65fff80c-0a5f-4c74-82ff-7e174fc10d13-1683280825656e191d-2": {
+          "type": "icon_links",
+          "settings": {
+            "title": "Order & Shipping",
+            "icon": "shopify:\/\/shop_images\/order-shipping.svg",
+            "url": "#"
+          }
+        },
+        "79f42d8c-74e1-43b8-a6e3-528f51f179ed": {
+          "type": "icon_links",
+          "settings": {
+            "title": "Warranty",
+            "icon": "shopify:\/\/shop_images\/warranty.svg",
+            "url": "#"
+          }
+        },
+        "171532c7-ca85-49b7-bc07-7920f368e17d": {
+          "type": "icon_links",
+          "settings": {
+            "title": "Product & Sizing",
+            "icon": "shopify:\/\/shop_images\/product-sizing.svg",
+            "url": "#"
+          }
+        },
+        "46ea35b5-9b43-449e-b059-65a17b9959bd": {
+          "type": "icon_links",
+          "settings": {
+            "title": "Boot Care",
+            "icon": "shopify:\/\/shop_images\/boot-care.svg",
+            "url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "template--18945828979005__65fff80c-0a5f-4c74-82ff-7e174fc10d13-1683280825656e191d-0",
+        "template--18945828979005__65fff80c-0a5f-4c74-82ff-7e174fc10d13-1683280825656e191d-1",
+        "template--18945828979005__65fff80c-0a5f-4c74-82ff-7e174fc10d13-1683280825656e191d-2",
+        "79f42d8c-74e1-43b8-a6e3-528f51f179ed",
+        "171532c7-ca85-49b7-bc07-7920f368e17d",
+        "46ea35b5-9b43-449e-b059-65a17b9959bd"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+        "address": "",
+        "show_store_hours": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ed1e1213-06ac-4619-87d1-eeecafa0400b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Repairs<\/h2>",
+            "heading_size": "h1"
+          }
+        },
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One remarkable advantage of investing in our boots is that they are rebuildable and\/or resoleable. You’ll recognize the same time-proven quality in your rebuilt boots as you did in your first pair of White’s Boots.<\/p>"
+          }
+        },
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-0",
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-1",
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-2"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "55b2b0b8-6811-4a62-92d3-ccdb8fd17d76": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--18945828979005__55b2b0b8-6811-4a62-92d3-ccdb8fd17d76-16832746128821af20-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHAT IS YOUR REPAIR POLICY?",
+            "row_content": "<p>In order to guarantee the best possible outcome for your repair, we will only accept White’s Boots at this time.<\/p>"
+          }
+        },
+        "template--18945828979005__55b2b0b8-6811-4a62-92d3-ccdb8fd17d76-16832746128821af20-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW DO I SEND MY BOOTS IN FOR A RESOLE OR REBUILD?",
+            "row_content": "<p>Please visit our <a href=\"https:\/\/whitesboots.com\/repairs\">Repairs page<\/a>, download and complete our <a href=\"https:\/\/whitesboots.com\/repair-form.pdf\">Repair Form<\/a>. Send the repair form along with your boots to:<\/p><p>Attn: White’s Boots Repairs<\/p><p>4002 E Ferry Ave<\/p><p>Spokane, WA 99202<\/p><p>White’s Boots is not responsible for packages lost in transit.<\/p>"
+          }
+        },
+        "template--18945828979005__55b2b0b8-6811-4a62-92d3-ccdb8fd17d76-16832746128821af20-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHICH BOOT STYLES CAN BE REBUILT?",
+            "row_content": "<p>All of our premiumHandsewn Stitchdownstyles and standardStitchdownstyles can be fully rebuilt.<\/p>"
+          }
+        },
+        "37889adf-bdf1-4b6f-8393-13a28700c721": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHAT IS NOT REPAIRABLE?",
+            "row_content": "<p>On a rare occasion, we’ll receive boots that are past the point of rebuilding. Typically, this is due to the quarters\/uppers being deteriorated.<\/p>"
+          }
+        },
+        "58be7373-512d-434c-bdc7-1f446c6739c7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHICH BOOT STYLES CAN BE RESOLED?",
+            "row_content": "<p>All of our boots, with the exception of our Grande Ronde Series boots, can be resoled.<\/p>"
+          }
+        },
+        "fbd21095-54f5-4ba3-9210-c1e193e0faef": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHAT IS THE LEAD TIME FOR A BOOT RESOLE AND\/OR REBUILD?",
+            "row_content": "<p>The wait time for resole and rebuild services fluctuates throughout the year, with busy times typically leading up to summer. The best way to get current expected wait times is to contact our Repairs Department by email at repairs@whitesboots.com or by calling 800-541-3786.<\/p>"
+          }
+        },
+        "0713763b-5d0d-46cd-bb11-3f3fa06346fe": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW MUCH DOES IT COST FOR A RESOLE?",
+            "row_content": "<p>Our standard resole pricing ranges from $135.00 to $250.00 as of January 1, 2023. Pricing will vary based on boot construction and sole type. For a resole quote, please contact our Repairs Department by email at repairs@whitesboots.com or by calling 800-541-3786.<\/p>"
+          }
+        },
+        "069cddc6-6338-4f48-a3bf-f7736ff589c7": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW MUCH DOES IT COST FOR A BOOT REBUILD?",
+            "row_content": "<p>Standard Handsewn Stitchdown rebuilds pricing starts at $388.00. Standard Stitchdown rebuilds pricing starts at $347.00. Additional fees will be applied for special requests such as double midsoles, toe caps, safety toes, etc.<\/p>"
+          }
+        },
+        "d8567219-ef43-4515-afa7-3c9496deb7af": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "DO I PAY NOW, OR ONCE MY REPAIR IS COMPLETE?",
+            "row_content": "<p>You have the option to pay in advance, or once the repair is finished. You will be emailed a copy of your sales order confirmation once your boots have been evaluated. At this time, please review the return address, repair details, and cost of repair. Once you have reviewed your sales order, you may call in payment so your boots will be shipped as soon as they’re complete, getting them back on your feet as soon as possible. If paying once the repair is complete, a White’s Boots representative will contact you to collect payment before the boots are shipped to you.<\/p>"
+          }
+        },
+        "3f3c1523-d02f-44ff-ab8f-9e7e54fcf836": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHAT CHANGES CAN I MAKE TO THE BOOT WHEN REBUILDING?",
+            "row_content": "<p>Our standard rebuilds will replace the outsole, midsole, insole, heel base, heel cap, vamp, heel counter, false tongues, and laces. Special requests such as size change, leather, last, etc. can be accommodated for an additional fee.<\/p>"
+          }
+        },
+        "59e6a485-870e-4bf9-b1fe-1592ed95cad2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WILL MY NFPA CERTIFIED BOOTS STILL BE CERTIFIED AFTER A REBUILD?",
+            "row_content": "<p>No, all NFPA boots will be rebuilt with the same materials and specifications, but once the original product is altered in any way, the NFPA certification is lost.<\/p>"
+          }
+        },
+        "776ad76b-904f-4c1f-beb5-0e66ef0df3f9": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WILL YOU REPAIR MY WHITE’S PAC BOOTS?",
+            "row_content": "<p>Unfortunately, we no longer offer repair services for the discontinued Pac Boots. We recommend contactingHoffman Boots.<\/p>"
+          }
+        },
+        "f7347fda-dee6-494f-9f51-50f04fd60e06": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "CAN YOU REPAIR MY BOOTS FROM A DIFFERENT MANUFACTURER?",
+            "row_content": "<p>In order to guarantee the best possible outcome for your rebuild\/resole, we will only repair White’s Boots.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18945828979005__55b2b0b8-6811-4a62-92d3-ccdb8fd17d76-16832746128821af20-0",
+        "template--18945828979005__55b2b0b8-6811-4a62-92d3-ccdb8fd17d76-16832746128821af20-1",
+        "template--18945828979005__55b2b0b8-6811-4a62-92d3-ccdb8fd17d76-16832746128821af20-2",
+        "37889adf-bdf1-4b6f-8393-13a28700c721",
+        "58be7373-512d-434c-bdc7-1f446c6739c7",
+        "fbd21095-54f5-4ba3-9210-c1e193e0faef",
+        "0713763b-5d0d-46cd-bb11-3f3fa06346fe",
+        "069cddc6-6338-4f48-a3bf-f7736ff589c7",
+        "d8567219-ef43-4515-afa7-3c9496deb7af",
+        "3f3c1523-d02f-44ff-ab8f-9e7e54fcf836",
+        "59e6a485-870e-4bf9-b1fe-1592ed95cad2",
+        "776ad76b-904f-4c1f-beb5-0e66ef0df3f9",
+        "f7347fda-dee6-494f-9f51-50f04fd60e06"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "open_first_collapsible_row": true
+      }
+    },
+    "62321c9d-9514-47f1-b438-4310bb3576f3": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--18945828979005__62321c9d-9514-47f1-b438-4310bb3576f3-16832778807a21699c-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHAT IS YOUR REPAIR POLICY?",
+            "row_content": "<p>In order to guarantee the best possible outcome for your repair, we will only accept White’s Boots at this time.<\/p>"
+          }
+        },
+        "template--18945828979005__62321c9d-9514-47f1-b438-4310bb3576f3-16832778807a21699c-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW DO I SEND MY BOOTS IN FOR A RESOLE OR REBUILD?",
+            "row_content": "<p>Please visit our <a href=\"https:\/\/whitesboots.com\/repairs\">Repairs page<\/a>, download and complete our Repair Form. Send the repair form along with your boots to:<\/p><p>Attn: White’s Boots Repairs<\/p><p>4002 E Ferry Ave<\/p><p>Spokane, WA 99202<\/p><p>White’s Boots is not responsible for packages lost in transit.<\/p>"
+          }
+        },
+        "template--18945828979005__62321c9d-9514-47f1-b438-4310bb3576f3-16832778807a21699c-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHICH BOOT STYLES CAN BE REBUILT?",
+            "row_content": "<p>All of our premium <a href=\"https:\/\/shop.whitesboots.com\/all-boots\/#filters=15_4\">Handsewn Stitchdown <\/a>styles and standard <a href=\"https:\/\/shop.whitesboots.com\/all-boots\/#filters=16_4\">Stitchdown <\/a>styles can be fully rebuilt.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18945828979005__62321c9d-9514-47f1-b438-4310bb3576f3-16832778807a21699c-0",
+        "template--18945828979005__62321c9d-9514-47f1-b438-4310bb3576f3-16832778807a21699c-1",
+        "template--18945828979005__62321c9d-9514-47f1-b438-4310bb3576f3-16832778807a21699c-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "Repairs",
+        "open_first_collapsible_row": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "65fff80c-0a5f-4c74-82ff-7e174fc10d13",
+    "form",
+    "ed1e1213-06ac-4619-87d1-eeecafa0400b",
+    "55b2b0b8-6811-4a62-92d3-ccdb8fd17d76",
+    "62321c9d-9514-47f1-b438-4310bb3576f3"
+  ]
+}

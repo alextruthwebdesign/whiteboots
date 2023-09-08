@@ -1,0 +1,61 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer-1": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "footer"
+          }
+        },
+        "footer-0": {
+          "type": "link_list",
+          "settings": {
+            "heading": "About",
+            "menu": "footer-menu-about"
+          }
+        },
+        "f1c05066-f704-4d34-92a4-0315dafcab04": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Info",
+            "menu": "footer-menu-info"
+          }
+        },
+        "e8a36741-3000-4d4e-acf5-8c18bde73300": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Help",
+            "menu": "footer-menu-help"
+          }
+        }
+      },
+      "block_order": [
+        "footer-1",
+        "footer-0",
+        "f1c05066-f704-4d34-92a4-0315dafcab04",
+        "e8a36741-3000-4d4e-acf5-8c18bde73300"
+      ],
+      "settings": {
+        "address": "<p>4002 E Ferry Ave. Spokane, WA 99202<\/p>",
+        "newsletter_enable": true,
+        "newsletter_heading": "Subscribe to our newsletter for new product updates, and exclusive discounts",
+        "show_social": true,
+        "show_policy": true,
+        "policy-links": "footer-policy-links",
+        "customer_service_heading": "Customer Service",
+        "customer_service_content": "<p>Weekdays 8am to 5pm PST<br\/><a href=\"tel:tel:800-541-3786\" title=\"tel:tel:800-541-3786\">800-541-3786<\/a><br\/><a href=\"mailto:orders@whitesboots.com\" title=\"mailto:orders@whitesboots.com\">orders@whitesboots.com<\/a><\/p>",
+        "margin_top": 48,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

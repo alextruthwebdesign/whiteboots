@@ -1,0 +1,52 @@
+<div class="content">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="subheader">{{ section.settings.text }}</div>
+    <div class="adddess-block third">
+        <div class="address-wrapper">
+            <p class="title">White’s Boots, Inc</p>
+            <a href="https://www.google.com/maps/place/4002 E Ferry Ave. Spokane, WA 99202" class="address" target="_blank">4002 E Ferry Ave. <br>Spokane, WA 99202</a>
+            <a class="futura-book phone" href="tel:5095351875">509-535-1875</a>
+            <p>&nbsp;</p>
+            <div class="hours">
+                <div class="hours-title">Hours</div>
+                <div class="hour"><p>Monday</p> <p>8am-6pm</p></div>
+                <div class="hour"><p>Tuesday</p> <p>8am-6pm</p></div>
+                <div class="hour"><p>Wednesday</p> <p>8am-6pm</p></div>
+                <div class="hour"><p>Thursday</p> <p>8am-6pm</p></div>
+                <div class="hour"><p>Friday</p> <p>8am-6pm</p></div>
+                <div class="hour"><p>Saturday</p> <p>9am-5pm</p></div>
+                <div class="hour"><p>Sunday</p> <p>9am-5pm</p></div>
+            </div>
+            <a href="https://www.google.com/maps/place/4002 E Ferry Ave. Spokane, WA 99202" class="btn" target="_blank">Directions <span class="button-arrow"></span></a>
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Retail Store",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+    },
+    {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Retail Store"
+    }
+  ]
+}
+{% endschema %}

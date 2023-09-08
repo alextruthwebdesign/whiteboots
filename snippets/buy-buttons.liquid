@@ -1,0 +1,197 @@
+{% comment %}
+  Renders product buy-buttons.
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} product form id.
+  - section_id: {String} id of section to which this snippet belongs.
+  - show_pickup_availability:: {Boolean} for the pickup availability. If true the pickup availability is rendered, false - not rendered (optional).
+
+  Usage:
+  {% render 'buy-buttons', block: block, product: product, product_form_id: product_form_id, show_pickup_availability: true %}
+{% endcomment %}
+{% assign inventory_rule = product.metafields.custom.inventory_rule.value %}
+{% assign inventory_rule = inventory_rule.value %}
+{% assign out_of_stock_message = product.metafields.custom.out_of_stock_message %}
+{% assign inventory_tracking = product.metafields.custom.inventory_tracking %}
+
+{% assign inventory_product_level = false %}
+{% if inventory_tracking.value.value == 'Yes' %}
+  {% assign inventory_product_level = true %}
+{% endif %}
+
+
+<div {{ block.shopify_attributes }}>
+  {%- if product != blank -%}
+    <product-form class="product-form">
+      <div class="product-form__error-message-wrapper" role="alert" hidden>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          class="icon icon-error"
+          viewBox="0 0 13 13"
+        >
+          <circle cx="6.5" cy="6.50049" r="5.5" stroke="white" stroke-width="2"/>
+          <circle cx="6.5" cy="6.5" r="5.5" fill="#EB001B" stroke="#EB001B" stroke-width="0.7"/>
+          <path d="M5.87413 3.52832L5.97439 7.57216H7.02713L7.12739 3.52832H5.87413ZM6.50076 9.66091C6.88091 9.66091 7.18169 9.37267 7.18169 9.00504C7.18169 8.63742 6.88091 8.34917 6.50076 8.34917C6.12061 8.34917 5.81982 8.63742 5.81982 9.00504C5.81982 9.37267 6.12061 9.66091 6.50076 9.66091Z" fill="white"/>
+          <path d="M5.87413 3.17832H5.51535L5.52424 3.537L5.6245 7.58083L5.63296 7.92216H5.97439H7.02713H7.36856L7.37702 7.58083L7.47728 3.537L7.48617 3.17832H7.12739H5.87413ZM6.50076 10.0109C7.06121 10.0109 7.5317 9.57872 7.5317 9.00504C7.5317 8.43137 7.06121 7.99918 6.50076 7.99918C5.94031 7.99918 5.46982 8.43137 5.46982 9.00504C5.46982 9.57872 5.94031 10.0109 6.50076 10.0109Z" fill="white" stroke="#EB001B" stroke-width="0.7">
+        </svg>
+        <span class="product-form__error-message"></span>
+      </div>
+
+      {%- form 'product',
+        product,
+        id: product_form_id,
+        class: 'form',
+        novalidate: 'novalidate',
+        data-type: 'add-to-cart-form'
+      -%}
+        <input
+          type="hidden"
+          name="id"
+          value="{{ product.selected_or_first_available_variant.id }}"
+          disabled
+          class="product-variant-id"
+        >
+        
+        <div class="product-form__buttons">
+          {%- liquid
+            assign check_against_inventory = true
+            if product.selected_or_first_available_variant.inventory_management != 'shopify' or  product.selected_or_first_available_variant.inventory_policy == 'continue'
+              assign check_against_inventory = false
+            endif
+            if product.selected_or_first_available_variant.quantity_rule.min > product.selected_or_first_available_variant.inventory_quantity and check_against_inventory
+              assign quantity_rule_soldout = true
+            endif
+          -%}
+          
+          {% assign current_variant = product.selected_or_first_available_variant %}
+          {% assign sold_out = product.metafields.custom.sold_out %}
+
+            <button
+              id = "ProductSubmitButton-{{ section_id }}"
+              type="submit"
+              name="add"
+              class="kaffeesatz-regular primary-button product-form__submit"
+              
+                {% if inventory_product_level and product.selected_or_first_available_variant.available == false or quantity_rule_soldout or sold_out %}
+                  disabled
+                {% endif %}
+              
+            >
+              
+              {%- if inventory_product_level and product.selected_or_first_available_variant.available == false or quantity_rule_soldout or sold_out -%}
+                {{ 'products.product.sold_out' | t }}
+              {%- else -%}
+                {{ 'products.product.add_to_cart' | t }}
+              {%- endif -%}
+              
+              <div class="loading-overlay__spinner hidden">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  class="spinner"
+                  viewBox="0 0 66 66"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                </svg>
+              </div>
+              <span class="button-arrow">&nbsp;</span>
+            </button>
+
+            {% if inventory_rule == 'OutOfStock' %}
+            <modal-dialog id="PopupModal-outOfStock" class="product-popup-modal">
+              <div
+                role="dialog"
+                aria-label="backorder modal"
+                aria-modal="true"
+                class="backorder-popup-modal__content"
+                tabindex="-1"
+              >
+                <div id="dialog_stock">
+                  <div class="dialog-stock-left">
+                      <h5 class="futura-bold">{{ out_of_stock_message.value.headline }}</h5>
+                      
+                        {{ out_of_stock_message.value.content | metafield_tag }}
+                        <br>
+                        <a href="javascript:void(0)" id="outOfStockAddToCart" class="kaffeesatz-regular primary-button">Add to Cart<span class="button-arrow">&nbsp;</span></a>
+                  </div>
+                  
+                  <div class="dialog-stock-right"  style="background-image: url({{ out_of_stock_message.value.image | file_url }})">
+                      <!-- <div id="div_instock">
+                      <p>Enter your email to receive updates on product availability.</p>
+                      <div>
+                      <form name="back_instock" id="back-instock" method="post">      
+                      <input type="hidden" id="mode" name="mode" value="NEWBIS" />
+                      <input type="hidden" id="bis_pid" name="bis_pid" value="390" />
+                      <input type="hidden" id="bis_piid" name="bis_piid" value="NOTSET" />
+                      <input type="hidden" id="bis_options_text" name="bis_options_text" value="" />
+                      <input type="email" id="snet-bis-email" name="bis_email" placeholder="Enter your Email" required />
+                      <input type="submit" id="btn_stock" name="btn_stock" class="hidden">
+                      <a href="javascript:void(0)" onclick="$('#btn_stock').trigger('click')" class="kaffeesatz-regular primary-button primary-button-gray">SUBMIT<span class="button-arrow">&nbsp;</span></a>
+                      </form>
+                      </div>
+                      </div> -->
+                      {% comment %} <div id="div_instock_result" style="display:none;"></div> {% endcomment %}
+                  </div>
+                  <a href="javascript:void(0)" id="ModalClose-backorder" class="dialog-lnk-close">&times;</a>
+                </div>
+              </div>
+            </modal-dialog>
+            {% endif %}
+
+          {%- if block.settings.show_dynamic_checkout -%}
+            {{ form | payment_button }}
+          {%- endif -%}
+        </div>
+      {%- endform -%}
+    </product-form>
+  {%- else -%}
+    <div class="product-form">
+      <div class="product-form__buttons form">
+        <button
+          type="submit"
+          name="add"
+          class="kaffeesatz-regular primary-button product-form__submit"
+          disabled
+        >
+          {{ 'products.product.sold_out' | t }}
+          <span class="button-arrow">&nbsp;</span>
+        </button>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- if show_pickup_availability -%}
+    {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
+
+    {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities
+      | where: 'pick_up_enabled', true
+    -%}
+
+    <pickup-availability
+      class="product__pickup-availabilities no-js-hidden quick-add-hidden"
+      {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %}
+        available
+      {% endif %}
+      data-root-url="{{ routes.root_url }}"
+      data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+      data-has-only-default-variant="{{ product.has_only_default_variant }}"
+    >
+      <template>
+        <pickup-availability-preview class="pickup-availability-preview">
+          {% render 'icon-unavailable' %}
+          <div class="pickup-availability-info">
+            <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
+            <button class="pickup-availability-button link link--text underlined-link">
+              {{ 'products.product.pickup_availability.refresh' | t }}
+            </button>
+          </div>
+        </pickup-availability-preview>
+      </template>
+    </pickup-availability>
+
+    <script src="{{ 'pickup-availability.js' | asset_url }}" defer="defer"></script>
+  {%- endif -%}
+</div>

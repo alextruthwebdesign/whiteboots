@@ -1,0 +1,253 @@
+{{ 'component-article-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-main-blog.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% assign usetags = 'bootmaking,collaborations,history,products' | split: ',' %}
+
+<div class="blog">
+{%- paginate blog.articles by 24 -%}
+  <div class="main-blog page-width section-{{ section.id }}-padding">
+    <h1 class="title--primary">{{ blog.title | escape }}</h1>
+
+    <div class="blog-filter">
+      <div class="blog-filter-wrapper">
+        <form method="post" action="#" class="blogs-search" onsubmit="event.preventDefault();">
+          <button type="submit">{% render 'icon-search' %}</button>
+          <input type="text" name="q" placeholder="Search" />
+        </form>
+        <div class="blog-categories">
+          <ul>
+            <li><a href="{{ blog.url }}">ALL</a></li>
+            {% for tag in usetags %}
+                <li><a href="{{ blog.url }}/tagged/{{ tag }}">{{tag }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="total_articles">{{ blog.articles_count }}{% if blog.articles_count <= 1 %} Article{% else%} Articles{% endif %}</div>
+      </div>
+    </div>
+
+    <div class="blog__posts {% if section.settings.layout == 'collage' %}blog-articles--collage{% endif %}{% if section.settings.layout == 'masonry' %} blog-articles--masonry{% else %} blog-articles{% endif %}">
+      {%- for article in blog.articles -%}
+        <div class="blog-articles__article article">
+          {%- render 'article-card',
+            article: article,
+            media_height: section.settings.image_height,
+            media_aspect_ratio: article.image.aspect_ratio,
+            show_image: section.settings.show_image,
+            show_date: section.settings.show_date,
+            show_author: section.settings.show_author,
+            show_excerpt: true,
+            usetags: usetags
+          -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- if paginate.pages > 1 -%}
+      {%- render 'pagination', paginate: paginate -%}
+    {%- endif -%}
+  </div>
+{%- endpaginate -%}
+</div>
+
+<script src="{{ 'macy.js' | asset_url }}" defer="defer"></script>
+
+<script type="text/javascript">
+  const allCategories = [{{ allcategories }}];
+  
+  document.addEventListener('DOMContentLoaded', function() {
+     // masonry
+     var macy = Macy({
+      container: '.blog-articles--masonry',
+      trueOrder: true,
+      waitForImages: false,
+      margin: 0,
+      columns: 3,
+      breakAt: {
+        1200: 2,
+        520: 1,
+      }
+    });
+
+    // blog search functionality
+    const getBlogPosts = async function(searchURL) {
+      currentAjaxRequest = await fetch(searchURL + '&view=json');
+      const jsonData = await currentAjaxRequest.json();
+
+      return jsonData;
+    }
+
+    var currentAjaxRequest = null;
+    const form = document.querySelector('form.blogs-search')
+    const input = form.querySelector('input[name="q"]')
+    const resultsList = document.querySelector('.blog__posts');
+    const firstLi = resultsList.querySelector('.article')
+    const clone = firstLi.cloneNode(true);
+
+    input.addEventListener("keyup", async (e) => {
+      const value = e.target.value
+      let searchURL = '/search?type=article&q=*';
+
+      if(value.length >= 3) {
+        searchURL = '/search?type=article&q=*' + value + '*';
+      } else {
+        searchURL = '/search?type=article&q=*';
+      }
+  
+      const posts = await getBlogPosts(searchURL)
+      
+      resultsList.innerHTML = '';
+      if(posts.results_count > 0) {
+        const results = [...posts.results].reverse(); // 4 3 2 1
+
+        for (let i = 0; i < posts.results_count; i++) {
+          let articleJson = results[i];
+          {% comment %} let category = allCategories.find((category, key) => category.id == articleJson.blog.blog_id); {% endcomment %}
+
+          let image = clone.querySelector('figure img');
+          let title = clone.querySelector('.card__heading a');
+          let link = clone.querySelector('.full-unstyled-link');
+          let blogTitle = clone.querySelector('.blog_title');
+          let author = clone.querySelector('.article_author');
+          let date = clone.querySelector('.article-card__info time');
+          let excerpt = clone.querySelector('.article_excerpt');
+          image.src = articleJson.thumbnail;
+          title.innerHTML = articleJson.title;
+          link.setAttribute('href', articleJson.url);
+          {% comment %} blogTitle.innerHTML = category.title; {% endcomment %}
+          author.innerHTML = articleJson.author;
+          date.innerHTML = articleJson.date
+          excerpt.innerHTML = articleJson.excerpt
+
+          resultsList.appendChild(clone.cloneNode(true));
+        }
+        
+        setTimeout(macy.reInit(), 1000);
+        
+      } else {
+        resultsList.innerHTML = '<li>NO RESULTS</li>'
+      }
+    });
+  })
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.main-blog.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.main-blog.settings.header.content"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "options": [
+        {
+          "value": "grid",
+          "label": "t:sections.main-blog.settings.layout.options__1.label"
+        },
+        {
+          "value": "collage",
+          "label": "t:sections.main-blog.settings.layout.options__2.label"
+        },
+        {
+          "value": "masonry",
+          "label": "Masonry"
+        }
+      ],
+      "default": "collage",
+      "label": "t:sections.main-blog.settings.layout.label",
+      "info": "t:sections.main-blog.settings.layout.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_image",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_image.label"
+    },
+    {
+      "type": "select",
+      "id": "image_height",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-blog.settings.image_height.options__1.label"
+        },
+        {
+          "value": "small",
+          "label": "t:sections.main-blog.settings.image_height.options__2.label"
+        },
+        {
+          "value": "medium",
+          "label": "t:sections.main-blog.settings.image_height.options__3.label"
+        },
+        {
+          "value": "large",
+          "label": "t:sections.main-blog.settings.image_height.options__4.label"
+        }
+      ],
+      "default": "medium",
+      "label": "t:sections.main-blog.settings.image_height.label",
+      "info": "t:sections.main-blog.settings.image_height.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_date",
+      "default": true,
+      "label": "t:sections.main-blog.settings.show_date.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "default": false,
+      "label": "t:sections.main-blog.settings.show_author.label"
+    },
+    {
+      "type": "paragraph",
+      "content": "t:sections.main-blog.settings.paragraph.content"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ]
+}
+{% endschema %}

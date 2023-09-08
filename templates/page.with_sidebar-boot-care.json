@@ -1,0 +1,119 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ed1e1213-06ac-4619-87d1-eeecafa0400b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Boot Care<\/h2>",
+            "heading_size": "h1"
+          }
+        },
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A pair of White’s isn’t just a pair of boots – it’s a crucial investment in your livelihood, no matter what your line of work. And as all good investments do, White’s Boots rewards those who treat them with care. Preserve and protect your boots with our line of recommended boot care products. Take care of your boots, and they’ll take care of you.<\/p>"
+          }
+        },
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-0",
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-1",
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-2"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "13905481-5a70-4484-bf17-d93edee041b7": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW DO I CLEAN MY BOOTS?",
+            "row_content": "<p>Remove the laces from your boots. Use a light horsehair brush to help remove any loose dirt and particles which can damage the leather over time. Wash boots using warm water and a mild soap. Wipe them off with a paper towel or a rag, then use a damp cloth or rag to wipe away any remaining residue off your boots. Once your boots are clean and have had time to air-dry, we recommend applying a light layer of <a href=\"\/collections\/conditioning\/\" title=\"\/collections\/conditioning\/\">White’s Boots Oil.<\/a><\/p>"
+          }
+        },
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW OFTEN SHOULD I CLEAN MY BOOTS?",
+            "row_content": "<p>We recommend cleaning your boots every 3-4 weeks if wearing them daily. Cleaning your boots frequently will help keep the leather soft and maintain its longevity.<\/p>"
+          }
+        },
+        "71498242-1506-4f26-8376-117e16bda809": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW DO I CONDITION MY BOOTS?",
+            "row_content": "<p>Use <a href=\"https:\/\/shop.whitesboots.com\/conditioning\/whites-boot-oil-gallon\/\">White’s Boot Oil<\/a> regularly to help repel water in moderate conditions.<\/p><p>Use <a href=\"https:\/\/shop.whitesboots.com\/conditioning\/whites-heavy-duty-leather-preservative-16-oz.\/\">White’s Heavy Duty Leather Preservative<\/a> often to keep leather supple and conditioned. This specially formulated combination of leather oils and propolis waxes will resist chemicals, acids, and water better and longer than any other repellent. Propolis also helps to prevent bacteria, mildew, and fungus growth.<\/p>"
+          }
+        },
+        "9787cc16-9127-46ae-b369-3df8aa4c9de5": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW SHOULD I DRY MY BOOTS?",
+            "row_content": "<p>Avoid drying wet boots near sources of intense heat. Campfires, radiators, and heaters can cook and damage wet leather at surprisingly low heat. In fact, the quickest way to damage a good pair of boots is to force dry them. Instead, allow your boots to dry at room temperature, or use aPeet Shoe Dryer.<\/p>"
+          }
+        },
+        "eae02260-7f4d-46df-b70b-b7f1b3cab951": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW DO I CLEAN AND CONDITION ROUGHOUT LEATHER?",
+            "row_content": "<p>We recommend caring for roughout leather the same way you would for smooth leathers. Roughout boots maintain their appearance longer when conditioned with White’s Boot Oil. If you wish to maintain the roughout look, using a hard bristle brush will keep the fibers upright.<\/p>"
+          }
+        },
+        "271e3a79-1bd1-4457-affc-b3beb0e35083": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "SHOULD I CLEAN THE INSIDE OF MY BOOTS?",
+            "row_content": "<p>Yes, to keep the inside of your boot fresh and clean, periodically scrub the inside of your boots using 2 tablespoons baking soda with 1 pint of water, followed by a light coat of preservative on interior leathers after air-drying.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-0",
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-1",
+        "71498242-1506-4f26-8376-117e16bda809",
+        "9787cc16-9127-46ae-b369-3df8aa4c9de5",
+        "eae02260-7f4d-46df-b70b-b7f1b3cab951",
+        "271e3a79-1bd1-4457-affc-b3beb0e35083"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "open_first_collapsible_row": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ed1e1213-06ac-4619-87d1-eeecafa0400b",
+    "13905481-5a70-4484-bf17-d93edee041b7"
+  ]
+}

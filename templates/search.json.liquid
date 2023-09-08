@@ -1,0 +1,61 @@
+{% layout none %}
+{% paginate search.results by 100 %}
+{% capture results %}
+  {% for item in search.results %}
+    {% assign blog = item %}
+
+    {% assign content = blog.excerpt | split: 'cdn.shopify' %}
+    {% assign first_img = content[1] | split: '"' | first | replace: '.com', '//cdn.shopify.com';;;; %}
+    
+    {% assign article_content = blog.content | split: 'cdn.shopify' %}
+    {% assign content_first_img = article_content[1] | split: '"' | first | replace: '.com', '//cdn.shopify.com';;;; %}
+
+    {% assign category = '' %}
+    {% for link in linklists['all-blogs'].links %}
+        {% assign b = link.object %}
+
+        {% if b.id == blog.blog_id %}
+            {% assign category = b.title %}
+        {% endif %}
+    {% endfor %}
+
+    {% if blog.image %}
+        {% assign featured_image = blog.image.src | image_url: width: 533  %}
+    {% else %}
+        {% if first_img != '' %}
+        {% assign featured_image = first_img %}
+        {% elsif content_first_img != '' %}
+        {% assign featured_image = content_first_img %}
+        {% else %}
+        {% assign featured_image = 'default.png' | asset_url %}
+        {% endif %}
+    {% endif %}
+
+    {% assign excerpt = '' %}
+    {%- if blog.excerpt.size > 0 -%}
+        {% assign excerpt = blog.excerpt %}
+      {%- else -%}
+      {% assign excerpt = blog.content | strip_html | truncatewords: 30 %}
+      {%- endif -%}
+
+    { 
+      "title"    : {{ blog.title | truncate: 50 | escape | json }},
+      "url"      : {{ blog.url | json }},
+      "excerpt"  : {{ excerpt | json }},
+      "thumbnail": {{ featured_image | json }},
+      "author": {{ blog.author | json }},
+      "date": {{ blog.published_at | time_tag: format: 'date' | json }},
+      "category": {{ category | json }},
+      "blog": {{ blog | json }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+{% endcapture %}
+{
+  "results_count": {{ search.results_count }},
+  "total": {{ search.results_count }},
+  "pages": {{ paginate.pages }},
+  "page": {{ paginate.current_page }},
+  "size": {{ paginate.page_size }},
+  "results": [{{ results }}]
+}
+{% endpaginate %}

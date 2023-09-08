@@ -1,0 +1,111 @@
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "0f59d72e-fa65-421a-9d75-d95ef3852b6f": {
+          "type": "collection",
+          "settings": {
+            "title": "FIRE BOOTS",
+            "collection": "fire-boots"
+          }
+        },
+        "6f21c05d-35a0-49d2-af5e-fc4d1877887a": {
+          "type": "collection",
+          "settings": {
+            "title": "LEGACY BOOTS",
+            "collection": "legacy-boots"
+          }
+        },
+        "b4998da6-643b-4997-83ba-ba23e025cdc8": {
+          "type": "collection",
+          "settings": {
+            "title": "LIFESTYLE BOOTS",
+            "collection": "lifestyle-boots"
+          }
+        },
+        "7529ca08-b847-4788-8382-0f043309a179": {
+          "type": "collection",
+          "settings": {
+            "title": "WORK BOOTS",
+            "collection": "work-boots"
+          }
+        },
+        "34908215-3daf-48c1-be84-d4431a5e3d82": {
+          "type": "collection",
+          "settings": {
+            "title": "GRANDE RONDE SERIES",
+            "collection": "grande-ronde-series"
+          }
+        },
+        "1db774a3-1670-45a4-83e1-1cb66ee9738e": {
+          "type": "collection",
+          "settings": {
+            "title": "BEST SELLERS",
+            "collection": "best-sellers"
+          }
+        },
+        "f82f9bd6-8e0a-4130-99d5-fa9d73e68d19": {
+          "type": "collection",
+          "settings": {
+            "title": "NEW ARRIVALS",
+            "collection": "new-arrivals"
+          }
+        },
+        "c61e46f1-6c31-4dbf-a8a9-e94304d901fd": {
+          "type": "collection",
+          "settings": {
+            "title": "COLLABORATIONS",
+            "collection": "collaborations"
+          }
+        },
+        "79584b57-3c92-4873-b620-15246c003932": {
+          "type": "collection",
+          "settings": {
+            "title": "CLOSEOUT",
+            "collection": "closeout"
+          }
+        }
+      },
+      "block_order": [
+        "0f59d72e-fa65-421a-9d75-d95ef3852b6f",
+        "6f21c05d-35a0-49d2-af5e-fc4d1877887a",
+        "b4998da6-643b-4997-83ba-ba23e025cdc8",
+        "7529ca08-b847-4788-8382-0f043309a179",
+        "34908215-3daf-48c1-be84-d4431a5e3d82",
+        "1db774a3-1670-45a4-83e1-1cb66ee9738e",
+        "f82f9bd6-8e0a-4130-99d5-fa9d73e68d19",
+        "c61e46f1-6c31-4dbf-a8a9-e94304d901fd",
+        "79584b57-3c92-4873-b620-15246c003932"
+      ],
+      "settings": {
+        "products_per_page": 16,
+        "columns_desktop": 4,
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "enable_filtering": true,
+        "filter_type": "horizontal",
+        "enable_sorting": true,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "product-grid"
+  ]
+}

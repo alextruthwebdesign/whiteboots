@@ -1,0 +1,86 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "78be3652-7446-42c1-8cf0-35614d9bbe1a": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "heading": "THE WHITE'S DAILY",
+        "heading_size": "h2",
+        "blogs": "",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "9624243d-fcdb-4394-b3ed-8a38d3f0f2ab": {
+      "type": "image-banner",
+      "blocks": {
+        "template--19162802028861__9624243d-fcdb-4394-b3ed-8a38d3f0f2ab-168473321545f57385-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Newsletter Signup",
+            "heading_size": "h1"
+          }
+        },
+        "template--19162802028861__9624243d-fcdb-4394-b3ed-8a38d3f0f2ab-168473321545f57385-1": {
+          "type": "text",
+          "settings": {
+            "text": "Subscribe to our newsletter for new product updates, and exclusive discounts.",
+            "text_style": "body"
+          }
+        },
+        "template--19162802028861__9624243d-fcdb-4394-b3ed-8a38d3f0f2ab-168473321545f57385-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        },
+        "0cce67d3-e7a8-433c-86d8-46ce983160f4": {
+          "type": "forms",
+          "settings": {
+            "newsletter_form": true
+          }
+        }
+      },
+      "block_order": [
+        "template--19162802028861__9624243d-fcdb-4394-b3ed-8a38d3f0f2ab-168473321545f57385-0",
+        "template--19162802028861__9624243d-fcdb-4394-b3ed-8a38d3f0f2ab-168473321545f57385-1",
+        "template--19162802028861__9624243d-fcdb-4394-b3ed-8a38d3f0f2ab-168473321545f57385-2",
+        "0cce67d3-e7a8-433c-86d8-46ce983160f4"
+      ],
+      "settings": {
+        "section_width": false,
+        "image": "shopify:\/\/shop_images\/newsletterSignupBG.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "78be3652-7446-42c1-8cf0-35614d9bbe1a",
+    "9624243d-fcdb-4394-b3ed-8a38d3f0f2ab"
+  ]
+}

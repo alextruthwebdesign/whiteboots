@@ -1,0 +1,457 @@
+{
+  "sections": {
+    "7a22dd5d-7b2b-4f40-80d1-735be14fba8b": {
+      "type": "hero",
+      "blocks": {
+        "5711eaa5-4067-4e8c-8022-0f2440fe3282": {
+          "type": "heading",
+          "settings": {
+            "heading": "MADE BY HAND SINCE 1853.",
+            "heading_size": "h1"
+          }
+        },
+        "221ae09a-a8a4-4d7b-befa-66b098f0bde3": {
+          "type": "text",
+          "settings": {
+            "text": "Our boots are made exactly like they should be—by hand—in Spokane, WA",
+            "text_style": "body"
+          }
+        },
+        "666401a2-947a-426e-ae41-687efd7525cd": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP ALL BOOTS",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "5711eaa5-4067-4e8c-8022-0f2440fe3282",
+        "221ae09a-a8a4-4d7b-befa-66b098f0bde3",
+        "666401a2-947a-426e-ae41-687efd7525cd"
+      ],
+      "custom_css": [
+        "h2 {font-family: \"Yanone Kaffeesatz\", sans-serif; font-size: 60px;}",
+        "@media (min-width: 1200px) {h2 {font-size: 90px; }}"
+      ],
+      "settings": {
+        "section_width": false,
+        "yt_video_id": "qmUFze6SMc4",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "fcbb0283-4912-42cc-b4a5-9cd02ee3903c": {
+      "type": "slideshow",
+      "blocks": {
+        "template--18140069134653__fcbb0283-4912-42cc-b4a5-9cd02ee3903c-16853493785b83ada5-0": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/smallbatch-001-hero.jpg",
+            "heading": "Small Batch 001 Now Available",
+            "heading_size": "h1",
+            "subheading": "Limited To 75 Pairs",
+            "button_label": "SHOP NOW",
+            "link": "\/collections\/all",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "background-1",
+            "text_alignment_mobile": "center"
+          }
+        }
+      },
+      "block_order": [
+        "template--18140069134653__fcbb0283-4912-42cc-b4a5-9cd02ee3903c-16853493785b83ada5-0"
+      ],
+      "disabled": true,
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "medium",
+        "slider_visual": "counter",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    },
+    "64cdaeab-4dbb-4a87-a394-60554688d3ef": {
+      "type": "featured-products-slider",
+      "blocks": {
+        "babb6e4c-f121-4493-affb-9ebd9f296601": {
+          "type": "product",
+          "settings": {
+            "product": "perry-hybrid-wedge"
+          }
+        },
+        "57afc8e3-0f39-4a0a-b5d4-ff5847ceef95": {
+          "type": "product",
+          "settings": {
+            "product": "perry-6-select"
+          }
+        }
+      },
+      "block_order": [
+        "babb6e4c-f121-4493-affb-9ebd9f296601",
+        "57afc8e3-0f39-4a0a-b5d4-ff5847ceef95"
+      ],
+      "settings": {
+        "heading": "<p>The White’s legacy is a boot inspired by the men and women who will wear it; tough, determined, and proud. Anything you can ask of a White’s Boot it can perform, because no matter who you are, you deserve the best boot money can buy.<\/p>",
+        "button_label": "SHOP ALL",
+        "link": "\/collections\/all"
+      }
+    },
+    "813651dc-3500-4a82-9c43-ba38b0285fe0": {
+      "type": "image-banner",
+      "blocks": {
+        "template--18140069134653__813651dc-3500-4a82-9c43-ba38b0285fe0-1685355262565af269-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "We’re The Last of a Dying Breed",
+            "heading_size": "h1"
+          }
+        },
+        "template--18140069134653__813651dc-3500-4a82-9c43-ba38b0285fe0-1685355262565af269-1": {
+          "type": "text",
+          "settings": {
+            "text": "The finest boots we make at White’s are built as true hand-sewn stitchdown boots. This means that each boot is hand-lasted, hand-welted, and hand-bottomed by one of our master bootmakers, a process that involves more than 25 unique stages, each performed by hand. Buying a White’s hand-sewn stitchdown boot is stepping into a long history of craft, dedication, and old-world quality that is increasingly rare, and enduringly valuable.",
+            "text_style": "body"
+          }
+        },
+        "template--18140069134653__813651dc-3500-4a82-9c43-ba38b0285fe0-1685355262565af269-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "READ MORE",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18140069134653__813651dc-3500-4a82-9c43-ba38b0285fe0-1685355262565af269-0",
+        "template--18140069134653__813651dc-3500-4a82-9c43-ba38b0285fe0-1685355262565af269-1",
+        "template--18140069134653__813651dc-3500-4a82-9c43-ba38b0285fe0-1685355262565af269-2"
+      ],
+      "custom_css": [
+        ".banner {margin: 50px;}",
+        ".banner__content {max-width: 100%;}",
+        ".banner__box {padding: 20px;}",
+        "h2 {font-family: VinchensoBoldBold, sans-serif;}",
+        "@media (min-width: 767px) {h2 {font-size: 54px; }}"
+      ],
+      "settings": {
+        "section_width": false,
+        "image": "shopify:\/\/shop_images\/last-of-a-dying-breed.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "eb9e7725-006d-4a54-ba88-1b32fbb4ceb5": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18140069134653__eb9e7725-006d-4a54-ba88-1b32fbb4ceb5-16854226369b190710-0": {
+          "type": "column",
+          "settings": {
+            "just_image": false,
+            "title": "A FULLY CUSTOMIZED FIT THAT MEETS YOUR HARSH DEMANDS",
+            "text": "<p>Whether your day is spent cutting fire line, climbing electrical poles, <br\/>or bucking logs, our boots are inspired by the men and women who will  wear it - tough, determined, and proud.<\/p>",
+            "link_label": "SHOP ALL BOOTS",
+            "link": "\/collections\/all"
+          }
+        },
+        "template--18140069134653__eb9e7725-006d-4a54-ba88-1b32fbb4ceb5-16854226369b190710-1": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/logging-boots.jpg",
+            "title": "LOGGING BOOTS",
+            "text": "",
+            "link_label": "SHOP LOGGING BOOTS",
+            "link": "#"
+          }
+        },
+        "ca48c14a-a9ae-437a-a177-3ce9b1574cb2": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/fire-boots.jpg",
+            "title": "FIRE BOOTS",
+            "text": "",
+            "link_label": "SHOP FIRE BOOTS",
+            "link": "#"
+          }
+        },
+        "3b6df76e-7c76-404b-8467-92359e5be107": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/word-boots-block.jpg",
+            "title": "WORK BOOTS",
+            "text": "",
+            "link_label": "SHOP WORK BOOTS",
+            "link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "template--18140069134653__eb9e7725-006d-4a54-ba88-1b32fbb4ceb5-16854226369b190710-0",
+        "template--18140069134653__eb9e7725-006d-4a54-ba88-1b32fbb4ceb5-16854226369b190710-1",
+        "ca48c14a-a9ae-437a-a177-3ce9b1574cb2",
+        "3b6df76e-7c76-404b-8467-92359e5be107"
+      ],
+      "custom_css": [
+        ".multicolumn {--grid-desktop-vertical-spacing: 0px; --grid-desktop-horizontal-spacing: 0px;}",
+        ".multicolumn .isolate {padding: 0; max-width: 100%;}",
+        ".multicolumn.content-over_image .just_image .multicolumn-card__info h3 {font-family: \"futura\", sans-serif; font-weight: 600; letter-spacing: 0.05em; font-size: clamp(24px, 3vw, 42px); max-width: 250px; text-align: left;}",
+        ".multicolumn-list li:first-child .multicolumn-card__info {max-width: 500px; margin: auto; padding: 20p; text-align: left;}",
+        ".multicolumn-list li:first-child h3 {font-size: 52px;}"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "content_style": "over_image",
+        "button_label": "",
+        "button_link": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "62d44eb7-917b-475f-b345-650ca73c3312": {
+      "type": "image-banner",
+      "blocks": {
+        "template--18140069134653__62d44eb7-917b-475f-b345-650ca73c3312-168542854033ed4254-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "TRUST THE ORIGINAL",
+            "heading_size": "h0"
+          }
+        },
+        "template--18140069134653__62d44eb7-917b-475f-b345-650ca73c3312-168542854033ed4254-1": {
+          "type": "text",
+          "settings": {
+            "text": "It took all kinds to track the trackless Pacific Northwest. And over more than 160 years, we've put boots on them all.",
+            "text_style": "subtitle"
+          }
+        },
+        "template--18140069134653__62d44eb7-917b-475f-b345-650ca73c3312-168542854033ed4254-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "READ OUR STORY",
+            "button_link_1": "#",
+            "button_style_secondary_1": false,
+            "button_label_2": "SHOP BOOTS",
+            "button_link_2": "\/collections\/all",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18140069134653__62d44eb7-917b-475f-b345-650ca73c3312-168542854033ed4254-0",
+        "template--18140069134653__62d44eb7-917b-475f-b345-650ca73c3312-168542854033ed4254-1",
+        "template--18140069134653__62d44eb7-917b-475f-b345-650ca73c3312-168542854033ed4254-2"
+      ],
+      "custom_css": [
+        ".banner {margin-top: 50px;}",
+        "@media screen and (min-width: 749px) {.banner__box {position: static; } .banner__buttons {position: absolute; bottom: 20px; right: 20px; }}"
+      ],
+      "settings": {
+        "section_width": false,
+        "image": "shopify:\/\/shop_images\/trust-the-original.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "6e4d731d-b185-4f2e-997e-d75cee02ad77": {
+      "type": "build-your-way",
+      "blocks": {
+        "15517d10-d2fc-4ba8-94b6-49439cf06b0b": {
+          "type": "slide",
+          "settings": {
+            "customize_image": "shopify:\/\/shop_images\/custom-4.jpg"
+          }
+        },
+        "50679f7a-29e6-4d11-aa2c-6ece84b9f838": {
+          "type": "slide",
+          "settings": {
+            "customize_image": "shopify:\/\/shop_images\/Custom-5.jpg"
+          }
+        },
+        "9816a9aa-6ff6-41f2-984f-0b8d80f60742": {
+          "type": "slide",
+          "settings": {
+            "customize_image": "shopify:\/\/shop_images\/Custom-1.jpg"
+          }
+        },
+        "b177dde4-3f2f-46b1-aa51-4faac9f44b0d": {
+          "type": "slide",
+          "settings": {
+            "customize_image": "shopify:\/\/shop_images\/Custom-2.jpg"
+          }
+        },
+        "ae76692e-e73a-4fac-b614-23a198abf877": {
+          "type": "slide",
+          "settings": {
+            "customize_image": "shopify:\/\/shop_images\/home-customizable-sole.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "15517d10-d2fc-4ba8-94b6-49439cf06b0b",
+        "50679f7a-29e6-4d11-aa2c-6ece84b9f838",
+        "9816a9aa-6ff6-41f2-984f-0b8d80f60742",
+        "b177dde4-3f2f-46b1-aa51-4faac9f44b0d",
+        "ae76692e-e73a-4fac-b614-23a198abf877"
+      ],
+      "settings": {
+        "main_heading": "Boots Built To Last.",
+        "rebuild_image_before": "shopify:\/\/shop_images\/rebuild-boot-before.jpg",
+        "rebuild_image_after": "shopify:\/\/shop_images\/rebuild-boot-after_cc34569c-0ed0-4667-bca1-bdd3e2963ffd.jpg",
+        "rebuild_heading": "Rebuildable\/Resoleable Boots",
+        "rebuild_content": "<p>The best part of rebuilding boots is getting to understand each of our customers’ unique story and the time they’ve spent in their White’s-inspiring us to keep on doing what we do.<\/p>",
+        "rebuild_button_label": "BOOT REBUILDS",
+        "rebuild_link": "#",
+        "customize_heading": "Customize Your Boots",
+        "customize_content": "<p>It wasn’t about the boot for Otto White, it was about the foot and man above it. We abide by his way of thinking still to this day. Whether your decisions are based on fitting requirements or style preferences, our custom boot ordering options will ensure that the boot you receive is the best boot for you.<\/p>",
+        "customize_button_label": "CUSTOM BOOTS",
+        "customize_link": "#"
+      }
+    },
+    "f8d288cd-5a1b-4fe7-82e4-6ce9bc5d9a64": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--18140069134653__f8d288cd-5a1b-4fe7-82e4-6ce9bc5d9a64-1685434244d7cd5561-0": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/footer-1_fca6f313-e14c-466b-a46d-be1ace142a10.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18140069134653__f8d288cd-5a1b-4fe7-82e4-6ce9bc5d9a64-1685434244d7cd5561-1": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/footer-2.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--18140069134653__f8d288cd-5a1b-4fe7-82e4-6ce9bc5d9a64-1685434244d7cd5561-2": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/footer-3.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "26dd15e5-722c-4386-9378-b858e0f46bab": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/footer-4.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "c3d3f701-04b9-4f9c-8c01-4dd0763668bf": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/footer-5.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--18140069134653__f8d288cd-5a1b-4fe7-82e4-6ce9bc5d9a64-1685434244d7cd5561-0",
+        "template--18140069134653__f8d288cd-5a1b-4fe7-82e4-6ce9bc5d9a64-1685434244d7cd5561-1",
+        "template--18140069134653__f8d288cd-5a1b-4fe7-82e4-6ce9bc5d9a64-1685434244d7cd5561-2",
+        "26dd15e5-722c-4386-9378-b858e0f46bab",
+        "c3d3f701-04b9-4f9c-8c01-4dd0763668bf"
+      ],
+      "custom_css": [
+        ".multicolumn {--grid-desktop-horizontal-spacing: 0px; --grid-desktop-vertical-spacing: 0px;}",
+        ".isolate {max-width: 100%; padding: 0;}",
+        ".title {font-family: VinchensoBoldBold, sans-serif;}"
+      ],
+      "settings": {
+        "title": "Our Community is Strong.",
+        "text": "<p>Tag <strong>@whitesboots<\/strong> and<em>#WhitesBoots<\/em>to be featured<\/p>",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 5,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "content_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "7a22dd5d-7b2b-4f40-80d1-735be14fba8b",
+    "fcbb0283-4912-42cc-b4a5-9cd02ee3903c",
+    "64cdaeab-4dbb-4a87-a394-60554688d3ef",
+    "813651dc-3500-4a82-9c43-ba38b0285fe0",
+    "eb9e7725-006d-4a54-ba88-1b32fbb4ceb5",
+    "62d44eb7-917b-475f-b345-650ca73c3312",
+    "6e4d731d-b185-4f2e-997e-d75cee02ad77",
+    "f8d288cd-5a1b-4fe7-82e4-6ce9bc5d9a64"
+  ]
+}

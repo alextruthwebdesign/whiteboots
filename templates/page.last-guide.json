@@ -1,0 +1,96 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "cf7e7bd0-249a-4427-84cc-3254b5e63086": {
+      "type": "hero",
+      "blocks": {
+        "b578c204-6fd0-416c-9173-c49684749f24": {
+          "type": "heading",
+          "settings": {
+            "heading": "Last Guide",
+            "heading_size": "h1"
+          }
+        },
+        "df79cff3-8128-4f75-abd1-a48a9661b6a9": {
+          "type": "text",
+          "settings": {
+            "text": "It wasn’t about the boot for Otto White, it was about the foot and man above it. We abide by his way of thinking still to this day. Whether your decisions are based on fitting requirements or style preferences, our custom boot ordering options will ensure that the boot you receive is the best boot for you.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "b578c204-6fd0-416c-9173-c49684749f24",
+        "df79cff3-8128-4f75-abd1-a48a9661b6a9"
+      ],
+      "settings": {
+        "section_width": false,
+        "yt_video_id": "",
+        "image": "shopify:\/\/shop_images\/last-guide-hero-image.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "da18e11b-ee80-40bb-9cdf-22d22921b729": {
+      "type": "last-guide",
+      "blocks": {
+        "0fb3cc2e-5578-4ab7-8799-e3c79e7ffabe": {
+          "type": "guide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/last-4811.png",
+            "title": "4811",
+            "content": "<p>Our most popular and longest tenured last, the 4811 is perhaps better known as the “Smokejumper Last”, the foundation of our famous wildland firefighting boot. The 4811 is deep in the toe-box, giving it a tough, square-jawed look that is emphasized by the medium-high arch and slightly narrower heel. This last was built to fit any foot securely and comfortably in the most extreme conditions, and it has been doing so for decades. We see no reason to change the program now.<\/p>",
+            "button_label": "SHOP 4811 BOOTS",
+            "button_link": "#"
+          }
+        },
+        "ac0a7f8b-bab5-4b59-88c2-ba8ead78fc77": {
+          "type": "guide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/last-55.png",
+            "title": "55",
+            "content": "<p>Our second most popular last, and our fourth official “Arch-Ease” last, the 55 doesn’t have a name like its siblings. Put simply, it is so uniquely comfortable it has never needed one to stand out from the pack. Introduced over 30 years ago, this last found its home in our offerings right away as a slightly lower arched alternative to the 4811, with a roomier toebox. For those interested in a boot that fits a little less tightly for weekend wear, the 55 last delivers our trademark support and comfort without the severe break in associated with a truly high arch.<\/p>",
+            "button_label": "SHOP 55 BOOTS",
+            "button_link": ""
+          }
+        },
+        "e18be319-40e5-4993-98f7-8ff598b8a6d0": {
+          "type": "guide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/last-5050.png",
+            "title": "5050",
+            "content": "<p>By popular demand, we have developed the 5050 Last for the White’s customer who seeks comfort provided by the traditional arch found in our other lasts, but also desires a more sleek toe shape found in most dress boots. From just behind the ball of the foot, toward the heel, the last is the same shape, fit and arch height as our well known 55 last. From behind the ball and toward the toes, the last has the same fit and toe shape as our MP last which was loosely designed off the Barrie Dress shoe last. We believe the blend of these two characteristics has created a last that will provide a style and comfort experience found nowhere else.<\/p>",
+            "button_label": "SHOP 5050 BOOTS",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "0fb3cc2e-5578-4ab7-8799-e3c79e7ffabe",
+        "ac0a7f8b-bab5-4b59-88c2-ba8ead78fc77",
+        "e18be319-40e5-4993-98f7-8ff598b8a6d0"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cf7e7bd0-249a-4427-84cc-3254b5e63086",
+    "da18e11b-ee80-40bb-9cdf-22d22921b729"
+  ]
+}

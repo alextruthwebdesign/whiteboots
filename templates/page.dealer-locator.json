@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "f389d590-34f3-4acc-8498-39b469e9c9c4": {
+      "type": "dealer-locator",
+      "settings": {
+        "heading": "",
+        "text": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "f389d590-34f3-4acc-8498-39b469e9c9c4"
+  ]
+}

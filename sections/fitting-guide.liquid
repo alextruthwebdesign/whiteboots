@@ -1,0 +1,122 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
+  {%- style -%}
+    @media screen and (max-width: 749px) {
+      #Banner-{{ section.id }}::before,
+      #Banner-{{ section.id }} .banner__media::before,
+      #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-{{ section.id }}::before,
+      #Banner-{{ section.id }} .banner__media::before {
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+        content: '';
+        display: block;
+      }
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+{%- style -%}
+  #Banner-{{ section.id }}::after {
+    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+  }
+{%- endstyle -%}
+
+<div class="step-1">
+    <div class="inner">
+        <div class="header">
+            <div class="step-title kaffeesatz">{{ section.settings.heading }}</div>
+            {{ section.settings.content }}
+        </div>
+        <div class="step count-{{ section.blocks.size }}">
+					{%- for block in section.blocks -%}
+						{%- case block.type -%}
+							{%- when 'step' -%}
+								<div class="item">
+									<img src="{{ block.settings.image | img_url:'600x' }}" alt="">
+									{{ block.settings.text }}
+								</div>
+							{%- when 'find-your-size' -%}
+								{% render 'find-your-size' %}
+							{%- when 'table' -%}
+								{{ block.settings.text }}
+						{%- endcase -%}
+					{%- endfor -%}
+        </div>
+        <hr>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Fitting Guide",
+  "tag": "section",
+  "class": "section fitting-guide",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "find-your-size",
+      "name": "Find Your Size",
+      "limit": 1,
+      "settings": []
+    },
+    {
+      "type": "step",
+      "name": "Step",
+      "limit": 3,
+      "settings": [
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Give customers details about the banner image(s) or content on the template.</p>",
+          "label": "t:sections.image-banner.blocks.text.settings.text.label"
+        }
+      ]
+    },
+		{
+      "type": "table",
+      "name": "Table",
+      "limit": 1,
+      "settings": [
+				{
+          "type": "textarea",
+          "id": "text",
+          "default": "<p>Give customers details about the banner image(s) or content on the template.</p>",
+          "label": "Content"
+        }
+			]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Fitting Guide"
+    }
+  ]
+}
+{% endschema %}

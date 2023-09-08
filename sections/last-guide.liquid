@@ -1,0 +1,106 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
+  {%- style -%}
+    @media screen and (max-width: 749px) {
+      #section-{{ section.id }}::before,
+      #section-{{ section.id }} .banner__media::before {
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #section-{{ section.id }}::before,
+      #section-{{ section.id }} .banner__media::before {
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+        content: '';
+        display: block;
+      }
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+{%- style -%}
+  #section-{{ section.id }}::after {
+    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+  }
+{%- endstyle -%}
+
+<div id="section-{{ section.id }}" class="last-guide-content">
+	<div class="inner">
+		{%- for block in section.blocks -%}
+		<div class="item">
+				{%- liquid
+					assign image_height = block.settings.image.width | divided_by: block.settings.image.aspect_ratio
+				-%}
+				{{
+					block.settings.image
+					| image_url: width: 500
+					| image_tag:
+						loading: 'lazy',
+						class: '',
+						sizes: '100vw',
+						widths: '375, 500'
+				}}
+				<h2>{{ block.settings.title }}</h2>
+				{{ block.settings.content }}
+				<a href="{{ block.settings.button_link }}" class="btn">{{ block.settings.button_label }}<span class="button-arrow"></span></a>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+{% schema %}
+{
+  "name": "Last Guide",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    
+  ],
+  "blocks": [
+    {
+      "type": "guide",
+      "name": "Guide",
+      "limit": 25,
+      "settings": [
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				},
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+					"type": "richtext",
+					"id": "content",
+					"label": "Content"
+        },
+				{
+          "type": "text",
+          "id": "button_label",
+          "label": "Button Label"
+        },
+				{
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Last Guide"
+    }
+  ]
+}
+{% endschema %}

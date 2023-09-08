@@ -1,0 +1,73 @@
+<script type='text/javascript' src='https://maps.google.com/maps/api/js?language=en&region=us&key=AIzaSyCpl2FyO3UcfeOOYEQW9pCZ3umpk0r7sXY&libraries=places,geometry&v=quarterly'></script>
+<script src="{{ 'dealer-locator.js' | asset_url }}" async defer="defer"></script>
+
+<dealer-locator data-url="{{ 'dealer-locators.json' | asset_url }}" data-pin="{{ 'map-pin@2x.png' | asset_url }}">
+    <div id="dealer-locator">
+        <div id="wpsl-wrap" class="wpsl-no-results">
+            <div class="wpsl-search wpsl-clearfix wpsl-geolocation-run">
+                <div id="wpsl-search-wrap">
+                    <form autocomplete="off" onsubmit="event.preventDefault();">
+                    <div class="wpsl-input">
+                        <div><label for="wpsl-search-input">Find a White's dealer near you</label></div>
+                        <div class="search-field"> <input id="wpsl-search-input" type="text" value="" name="wpsl-search-input" placeholder="" aria-required="true" class="pac-target-input" autocomplete="off"> <span class="search-icons"><img src="{{ 'icon-search.png' | asset_url }}" alt=""></span></div>
+                        <div class="gray-text"><p>Looking for global dealers?<a href="">View our global dealers</a></p></div>
+                    </div>
+                    <div class="wpsl-select-wrap">
+                        <div id="wpsl-radius">
+                            <label for="wpsl-radius-dropdown">Search radius</label>
+                            <div class="wpsl-dropdown"><select id="wpsl-radius-dropdown" class="" name="wpsl-radius" style="display: none;">
+                                <option value="10">10 mi</option><option value="25">25 mi</option><option selected="selected" value="50">50 mi</option><option value="100">100 mi</option><option value="200">200 mi</option><option value="500">500 mi</option>
+                            </select><span data-value="50" class="wpsl-selected-item">50 mi</span><div><ul><li data-value="10">10 mi</li><li data-value="25">25 mi</li><li data-value="50" class="wpsl-selected-dropdown">50 mi</li><li data-value="100">100 mi</li><li data-value="200">200 mi</li><li data-value="500">500 mi</li></ul></div></div>
+                        </div>
+                        <div id="wpsl-results">
+                            <label for="wpsl-results-dropdown">Results</label>
+                            <div class="wpsl-dropdown"><select id="wpsl-results-dropdown" class="" name="wpsl-results" style="display: none;">
+                                <option value="25">25</option><option selected="selected" value="50">50</option><option value="75">75</option><option value="100">100</option>
+                            </select><span data-value="50" class="wpsl-selected-item">50</span><div><ul><li data-value="25">25</li><li data-value="50" class="wpsl-selected-dropdown">50</li><li data-value="75">75</li><li data-value="100">100</li></ul></div></div>
+                        </div>
+                    </div>
+                        <div class="wpsl-search-btn-wrap"><input id="wpsl-search-btn" type="submit" value="Search"></div>
+                </form>
+                </div>
+            </div>
+            <div id="wpsl-gmap"></div>
+
+            <div id="wpsl-result-list">
+                <div id="wpsl-stores">
+                    <ul></ul>
+                </div>
+                <div id="wpsl-direction-details">
+                    <ul></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</dealer-locator>
+
+{% schema %}
+{
+  "name": "Dealer Locator",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+    },
+    {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Dealer Locator"
+    }
+  ]
+}
+{% endschema %}

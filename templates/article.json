@@ -1,0 +1,111 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": true,
+            "blog_show_author": true
+          }
+        },
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "adapt"
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "featured_image",
+        "content",
+        "share"
+      ],
+      "settings": {
+      }
+    },
+    "4a050506-d1de-42b9-859b-448eec46c56c": {
+      "type": "image-banner",
+      "blocks": {
+        "template--18140069036349__4a050506-d1de-42b9-859b-448eec46c56c-16843079779579b15c-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--18140069036349__4a050506-d1de-42b9-859b-448eec46c56c-16843079779579b15c-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--18140069036349__4a050506-d1de-42b9-859b-448eec46c56c-16843079779579b15c-2": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "SHOP NEW ARRIVALS",
+            "button_link_1": "shopify:\/\/collections\/new-arrivals",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18140069036349__4a050506-d1de-42b9-859b-448eec46c56c-16843079779579b15c-0",
+        "template--18140069036349__4a050506-d1de-42b9-859b-448eec46c56c-16843079779579b15c-1",
+        "template--18140069036349__4a050506-d1de-42b9-859b-448eec46c56c-16843079779579b15c-2"
+      ],
+      "settings": {
+        "section_width": true,
+        "image": "shopify:\/\/shop_images\/new-arrivals.jpg",
+        "image_overlay_opacity": 10,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "accent-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "4fce2ea7-bd21-4143-8cb4-189e544fa907": {
+      "type": "related-articles",
+      "settings": {
+        "section_width": false,
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4a050506-d1de-42b9-859b-448eec46c56c",
+    "4fce2ea7-bd21-4143-8cb4-189e544fa907"
+  ]
+}

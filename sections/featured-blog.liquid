@@ -1,0 +1,308 @@
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+{% comment %} Use string splitting to pull the value from content_for_header and apply some string clean up {% endcomment %}
+{%- assign pageUrl = contentForQuerystring | split:'"pageurl":"' | last | split:'"' | first | split:'.myshopify.com' | last |
+   replace:'\/','/' | 
+   replace:'%20',' ' | 
+   replace:'\u0026','&'
+-%}
+
+{%- assign pageQuerystring = pageUrl | split:'?' | last -%}
+
+{% assign q = pageQuerystring | replace: "q=", "" %}
+
+<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-article-card.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-article-card.css' | asset_url | stylesheet_tag }}</noscript>
+
+{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign posts_displayed = section.settings.blog.articles_count
+  if section.settings.post_limit <= section.settings.blog.articles_count
+    assign posts_exceed_limit = true
+    assign posts_displayed = section.settings.post_limit
+  endif
+-%}
+
+{% assign total_articles = 0 %}
+
+{% for link in linklists[section.settings.blogs].links %}
+  {% assign blog = link.object %}
+  {% if blog.articles_count > 0 %}
+    {% assign total_articles = total_articles | plus: blog.articles_count %}
+  {% endif %}
+{% endfor %}
+
+<div class="blog">
+  <div class="page-width isolate section-{{ section.id }}-padding">
+    {%- unless section.settings.heading == blank -%}
+      <div class="title-wrapper-with-link{% if posts_displayed > 2 %} title-wrapper--self-padded-tablet-down{% else %} title-wrapper--self-padded-mobile{% endif %} title-wrapper--no-top-margin">
+        <h2 id="SectionHeading-{{ section.id }}" class="blog__title {{ section.settings.heading_size }}">
+          {{ section.settings.heading | escape }}
+        </h2>
+
+        {%- if section.settings.blog != blank
+          and section.settings.show_view_all
+          and section.settings.post_limit < section.settings.blog.articles_count
+        -%}
+          <a
+            href="{{ section.settings.blog.url }}"
+            class="link underlined-link large-up-hide"
+          >
+            {{ 'sections.featured_blog.view_all' | t }}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endunless -%}
+
+    <div class="blog-filter">
+      <div class="blog-filter-wrapper">
+        <form method="post" action="#" class="blogs-search" onsubmit="event.preventDefault();">
+          <button type="submit">{% render 'icon-search' %}</button>
+          <input type="text" name="q" placeholder="Search" />
+        </form>
+        <div class="blog-categories">
+          <ul>
+          {% for link in linklists[section.settings.blogs].links %}
+            {% assign blog = link.object %}
+            <li><a href="/blogs/{{ blog.handle }}">{{ link.title }}</a></li>
+          {% endfor %}
+          </ul>
+        </div>
+        <div class="total_articles">{{ total_articles }}{% if total_articles <= 1 %} Article{% else%} Articles{% endif %}</div>
+      </div>
+    </div>
+
+    {% assign controllers = '' %}
+    <ul
+      class="blog__posts articles-wrapper contains-card contains-card--article grid grid--2-col-tablet grid--{{ section.settings.columns_desktop }}-col-desktop"
+      role="list"
+    >
+    {% for link in linklists[section.settings.blogs].links %}
+      {% assign blog = link.object %}
+      {% if blog.articles_count > 0 %}
+
+        {% for article in blog.articles %}
+          <li
+            {% comment %} id="blog-{{ forloop.index }}" {% endcomment %}
+            class="blog__post grid__item article"
+          >
+            {% render 'article-card',
+              blog: blog,
+              article: article,
+              media_aspect_ratio: 1.66,
+              show_image: true,
+              show_date: true,
+              show_author: true,
+              show_excerpt: true
+            %}
+          </li>
+        {% endfor %} 
+        
+      {% endif %}
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+
+{% capture allcategories %}
+  {% for link in linklists[section.settings.blogs].links %}
+    {% assign blog = link.object %}
+    {% if blog.articles_count > 0 %}
+      { 
+        id: {{ blog.id }},
+        title: {{ blog.title | json }}
+      }{% unless forloop.last %},{% endunless %}
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+
+<script src="{{ 'macy.js' | asset_url }}" defer="defer"></script>
+
+<script type="text/javascript">
+  const allCategories = [{{ allcategories }}];
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    // masonry
+    var macy = Macy({
+      container: '.blog__posts',
+      trueOrder: true,
+      waitForImages: false,
+      margin: 60,
+      columns: 3,
+      breakAt: {
+        1200: 2,
+        520: 1,
+      }
+    });
+
+    // blog search functionality
+    const getBlogPosts = async function(searchURL) {
+      currentAjaxRequest = await fetch(searchURL + '&view=json');
+      const jsonData = await currentAjaxRequest.json();
+
+      return jsonData;
+    }
+
+    var currentAjaxRequest = null;
+    const form = document.querySelector('form.blogs-search')
+    const input = form.querySelector('input[name="q"]')
+    const resultsList = document.querySelector('.blog__posts');
+    const firstLi = resultsList.querySelector('li')
+    const clone = firstLi.cloneNode(true);
+
+    input.addEventListener("keyup", async (e) => {
+      const value = e.target.value
+      let searchURL = '/search?type=article&q=*';
+
+      if(value.length >= 3) {
+        searchURL = '/search?type=article&q=*' + value + '*';
+      } else {
+        searchURL = '/search?type=article&q=*';
+      }
+  
+      const posts = await getBlogPosts(searchURL)
+      
+      resultsList.innerHTML = '';
+      if(posts.results_count > 0) {
+        const results = [...posts.results].reverse(); // 4 3 2 1
+
+        for (let i = 0; i < posts.results_count; i++) {
+          let articleJson = results[i];
+          let category = allCategories.find((category, key) => category.id == articleJson.blog.blog_id);
+
+          let image = clone.querySelector('figure img');
+          let title = clone.querySelector('.card__heading a');
+          let link = clone.querySelector('.full-unstyled-link');
+          let blogTitle = clone.querySelector('.blog_title');
+          let author = clone.querySelector('.article_author');
+          let date = clone.querySelector('.article-card__info time');
+          let excerpt = clone.querySelector('.article_excerpt');
+          image.src = articleJson.thumbnail;
+          title.innerHTML = articleJson.title;
+          link.setAttribute('href', articleJson.url);
+          blogTitle.innerHTML = category.title;
+          author.innerHTML = articleJson.author;
+          date.innerHTML = articleJson.date
+          excerpt.innerHTML = articleJson.excerpt
+
+          resultsList.appendChild(clone.cloneNode(true));
+        }
+
+        {% comment %} setTimeout(macy.recalculate(), 500); {% endcomment %}
+        
+      } else {
+        resultsList.innerHTML = '<li>NO RESULTS</li>'
+      }
+    });
+  });
+  </script>
+
+{% schema %}
+{
+  "name": "t:sections.featured-blog.name",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "Blog posts",
+      "label": "t:sections.featured-blog.settings.heading.label"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
+    },
+    {
+      "type": "link_list",
+      "id": "blogs",
+      "label": "Blogs From Menu"
+    },
+    {
+      "type": "range",
+      "id": "post_limit",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.featured-blog.settings.post_limit.label"
+    },
+    {
+      "type": "range",
+      "id": "columns_desktop",
+      "min": 1,
+      "max": 4,
+      "step": 1,
+      "default": 3,
+      "label": "t:sections.featured-blog.settings.columns_desktop.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blogs From Menu"
+    }
+  ]
+}
+{% endschema %}

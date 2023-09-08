@@ -1,0 +1,215 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "cec6f5ab-e4cb-4cc4-bfe3-67cc49fbef41": {
+      "type": "hero",
+      "blocks": {
+        "d6dd6231-9323-4c06-8b9d-77be4c6d40d3": {
+          "type": "heading",
+          "settings": {
+            "heading": "Custom Boots",
+            "heading_size": "h1"
+          }
+        },
+        "7324eac3-ab9b-4583-b2d6-f884857e878f": {
+          "type": "text",
+          "settings": {
+            "text": "In 1946, a WWII veteran named Ray Plowman walked into White’s Shoe Shop with half a left foot. A landmine in the field of battle had claimed the other half. So Otto put his best bootmaker on the job of making Ray a shoe last that could be used over and over again until the day he died; and it was. Built and rebuilt countless times, his boots were one of a kind. If we can make a boot for Ray, we can make one for you.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "d6dd6231-9323-4c06-8b9d-77be4c6d40d3",
+        "7324eac3-ab9b-4583-b2d6-f884857e878f"
+      ],
+      "settings": {
+        "section_width": false,
+        "yt_video_id": "",
+        "image": "shopify:\/\/shop_images\/custom-boots-hero-image.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "bc99471b-0e62-4d08-a564-0e09ebc771ae": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19183037710653__bc99471b-0e62-4d08-a564-0e09ebc771ae-168490882728f28d37-0": {
+          "type": "column",
+          "settings": {
+            "just_image": false,
+            "image": "shopify:\/\/shop_images\/illustration-leather-upper.svg",
+            "title": "Leather Upper",
+            "text": "<p>Name the hide, pick a color, and we’ve made a boot with it. From cowhide to shark-skin, White’s customers all over the world are wearing boots that are truly one of a kind. We stock the highest quality leather from the best tanneries around the world, including Horween® and Seidel, to provide a range of options wide enough to suit any taste.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19183037710653__bc99471b-0e62-4d08-a564-0e09ebc771ae-168490882728f28d37-1": {
+          "type": "column",
+          "settings": {
+            "just_image": false,
+            "image": "shopify:\/\/shop_images\/illustration-sole.svg",
+            "title": "Sole",
+            "text": "<p>The composition of the material that stands between your foot and the earth is one of the most important things in the anatomy of a boot. We offer a wide array of soles, including Dainite and Vibram® soles. Whether you’re in the wildlands or the concrete jungles, we’ll provide the foundation you need for good traction and a comfortable fit.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19183037710653__bc99471b-0e62-4d08-a564-0e09ebc771ae-168490882728f28d37-2": {
+          "type": "column",
+          "settings": {
+            "just_image": false,
+            "image": "shopify:\/\/shop_images\/illustration-heel.svg",
+            "title": "Heel",
+            "text": "<p>From a straight block heel to a slanted logger heel, and everything in between, let us know how you prefer to stand tall and we’ll grind it down and buff it to your liking. The foundation of any great boot is a stacked leather heel: that’s a given. But how it looks is up to you.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "3ed78f4a-d7f4-48ac-81c8-520d877b98ff": {
+          "type": "column",
+          "settings": {
+            "just_image": false,
+            "image": "shopify:\/\/shop_images\/illustration-hardware.svg",
+            "title": "Hardware",
+            "text": "<p>The subtle importance of the trim on your boot is never lost on us. Choose the color and configuration of eyelets and speed hooks and we’ll use your specifications. We stock a wide selection of brass that will hold everything together under the harshest conditions.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "32ca1fdc-181c-4945-a558-35d1548398c4": {
+          "type": "column",
+          "settings": {
+            "just_image": false,
+            "image": "shopify:\/\/shop_images\/illustration-last.svg",
+            "title": "Last",
+            "text": "<p>or most boots on the street, choosing the shoe last is not an option. Here at White’s however, some of our traditional styles, such as the 350 and Semi Dress, can be built on several different lasts. For the true boot aficionado, we’ll go to any lengths to accommodate customization. Let us know the arch support you prefer and we’ll help you find the right fit. <a href=\"https:\/\/whitesboots.com\/last-guide\/\">See our lasts<\/a><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "cfd8ba20-8d15-4ae1-8976-c0b088e4221b": {
+          "type": "column",
+          "settings": {
+            "just_image": false,
+            "image": "shopify:\/\/shop_images\/illustration-made-to-measure.svg",
+            "title": "Made to Measure",
+            "text": "<p>As we learned from Ray Plowman, not every foot is the same—even when the same man owns them both! That means a truly made-to-measure boot considers the dimensions of both feet individually. If you need one boot wider, narrower, longer, shorter, or even a completely different size than the other, we have you covered. No matter the landmine, we’ll find a way.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19183037710653__bc99471b-0e62-4d08-a564-0e09ebc771ae-168490882728f28d37-0",
+        "template--19183037710653__bc99471b-0e62-4d08-a564-0e09ebc771ae-168490882728f28d37-1",
+        "template--19183037710653__bc99471b-0e62-4d08-a564-0e09ebc771ae-168490882728f28d37-2",
+        "3ed78f4a-d7f4-48ac-81c8-520d877b98ff",
+        "32ca1fdc-181c-4945-a558-35d1548398c4",
+        "cfd8ba20-8d15-4ae1-8976-c0b088e4221b"
+      ],
+      "custom_css": [
+        ".multicolumn {--grid-desktop-horizontal-spacing: 30px; --grid-desktop-vertical-spacing: 30px;}"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "bordered",
+        "content_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "922cfa27-4641-4259-9ddf-f46c034008c6": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19183037710653__922cfa27-4641-4259-9ddf-f46c034008c6-168490882728f28d37-0": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/sewing-half-image.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19183037710653__922cfa27-4641-4259-9ddf-f46c034008c6-168490882728f28d37-1": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/boots-on-wood-half-image.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19183037710653__922cfa27-4641-4259-9ddf-f46c034008c6-168490882728f28d37-0",
+        "template--19183037710653__922cfa27-4641-4259-9ddf-f46c034008c6-168490882728f28d37-1"
+      ],
+      "custom_css": [
+        ".multicolumn {--grid-desktop-horizontal-spacing: 30px; --grid-desktop-vertical-spacing: 30px;}"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "content_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ee062944-55d4-41ae-abc4-7e054c8e36ea": {
+      "type": "share-your-story",
+      "settings": {
+        "heading": "Questions About Custom Boots?",
+        "text": "<p>Whether you're looking to build a custom boot starting with the last of your choice, or simply make changes to an existing stock model, our Orders Department can easily walk you though the process.<\/p>",
+        "image": "shopify:\/\/shop_images\/boots-form-image.jpg",
+        "after_image_text": "<p>Call to speak with our Orders Department about building your custom boots.<\/p><p><strong>(800) 541-3786<\/strong><\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cec6f5ab-e4cb-4cc4-bfe3-67cc49fbef41",
+    "bc99471b-0e62-4d08-a564-0e09ebc771ae",
+    "922cfa27-4641-4259-9ddf-f46c034008c6",
+    "ee062944-55d4-41ae-abc4-7e054c8e36ea"
+  ]
+}

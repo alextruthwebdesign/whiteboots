@@ -1,0 +1,127 @@
+{% assign stockValue = product.metafields.custom.inventories %}
+{% assign all_stocks = stockValue.stock %}
+{% assign all_out_of_stocks = stockValue.out_of_stock %}
+{% assign discontinued = product.metafields.custom.discontinued %}
+{% assign sold_out = product.metafields.custom.sold_out %}
+{% assign inventory_tracking_query = product.metafields.custom.inventory_tracking %}
+{% assign inventory_tracking = inventory_tracking_query.value.value %}
+
+{% comment %} {% if inventory_tracking == 'Yes' %} {% comment %} hack for frontend {% endcomment %}
+    {% assign discontinued = false %}
+{% endif %} {% endcomment %}
+
+
+{% if product.selected_or_first_available_variant.available == false or quantity_rule_soldout %}
+    {% assign sold_out = true %}
+{% endif %}
+
+<swatches-variants>
+<script>
+const discontinued = {{ discontinued }}
+const inventory_tracking = "{{ inventory_tracking }}"
+</script>
+<script id="stockData" type="application/json">{{ all_stocks | json }}</script>
+
+{% for cvariant in custom_variants %}
+    {% assign v = product.metafields.custom[cvariant].value %}
+    {% assign out_of_stock = stockValue.out_of_stock[cvariant] %}
+    {% assign forloopindex = forloop.index %}
+
+    {% if v != blank %}
+        {% assign variant_title = '' %}
+        {% case cvariant %}
+        {% when "variant_leather_color" %}
+            {% assign variant_title = 'Leather Color' %}
+        {% when "variant_size" %}
+            {% assign variant_title = 'Size' %}
+        {% when "variant_width" %}
+            {% assign variant_title = 'Width' %}
+        {% endcase %}
+
+        <div class="product-attribute clearfix field">
+            <label>{{ variant_title }}</label>
+            <span class="label_select">Select {{ variant_title }}</span>
+            
+            {% if cvariant contains 'size' %}
+                <modal-opener
+                class="no-js-hidden quick-add-hidden"
+                data-modal="#PopupModal-find-size"
+                >
+                <button
+                    id="ProductPopup-find-size"
+                    class="product-popup-modal__button link find-size-lnk"
+                    type="button"
+                    aria-haspopup="dialog"
+                >
+                    <img src="{{ 'find-your-size-icon.svg' | asset_url }}"> Find Your Size
+                </button>
+                </modal-opener>
+                <a href="/pages/fitting" class="find-size-lnk product-popup-modal__button link no-js"><img src="{{ 'find-your-size-icon.svg' | asset_url }}">Find Your Size</a>
+            {% endif %}
+
+            <div>
+                {% comment %} <input type="hidden" name="properties[{{variant_title}}]" data-title="{{ variant_title }}"> {% endcomment %}
+                <select id="{{cvariant}}" name="properties[{{variant_title}}]" class="hidden" data-title="{{ variant_title }}" data-attribute_name="{{ cvariant }}">
+                    <option value="">Select {{ variant_title }}</option>
+                    {% for option in v %}
+                        {% assign handle = option.title | handle %}
+                        {% if sold_out %}
+                            {% assign out = true %}
+                        {% else %}
+                            {% assign out = false %}
+                        {% endif %}
+                        
+                        {% comment %} {% for os in out_of_stock %}
+    
+                            {% assign out_handle = os | handle %}
+                            {% if out_handle == handle %}
+                                {% assign out = true %}
+                            {% endif %}
+                        {% endfor %} {% endcomment %}
+                        
+                        <option value="{{ option.title | handle }}"{% if out %} disabled{% endif %}>{{ option.title }}</option>
+                    {% endfor %}
+                </select>
+
+                <div class="swatches-wrapper">
+                {% for option in v %}
+                    {% assign handle = option.title | handle %}
+
+                    {% if sold_out %}
+                        {% assign out = true %}
+                    {% else %}
+                        {% assign out = false %}
+                    {% endif %}
+                    
+                    {% comment %} 
+                        {% if discontinued %}
+                        {% for os in out_of_stock %}
+                            {% assign out_handle = os | handle %}
+                            {% if out_handle == handle %}
+                                {% assign out = true %}
+                            {% endif %}
+                        {% endfor %}
+                        {% endif %} 
+                    {% endcomment %}
+
+                    <div class="swatch-box{% unless cvariant contains 'color' %} swatch-box-plain{% endunless %}{% if out %} out-stock-swatch-color{% endif %}" role="button" data-title="{{ variant_title }}" data-option-value="{{ option.title }}" data-attribute_name={{cvariant}} data-variant="{{ handle }}" data-position="{{ forloopindex }}">
+                        {% if cvariant == 'variant_leather_color' %}
+                            <img src="{{ option.image | img_url }}" border="0">
+                        {% else %}
+                            {{ option.title }}
+                        {% endif %}
+                    </div>
+                {% endfor %}
+                </div>
+                {% if cvariant == 'variant_size' %}
+                <div class="size-note-box">
+                    White's boot last run large. This means most people should take a half size down from their natural shoe size, or Brannock measurement. On our highest arched lasts, a full size may be necessary as the arch support shortens the overall length of the foot during wear. <a href="/pages/fitting">Fit Guide</a>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}
+</swatches-variants>
+
+<script src="{{ 'swatches.js' | asset_url }}" defer="defer"></script>

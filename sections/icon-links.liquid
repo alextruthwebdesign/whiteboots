@@ -1,0 +1,65 @@
+{% if section.blocks %}
+<div class="top-menu-block">
+    {%- for block in section.blocks -%}
+    <a class="menu-block" href="{{ block.settings.url }}">
+        {% assign image = block.settings.icon %}
+        <img src="{{ image | img_url }}" alt="icon">
+        {{ block.settings.title }}
+    </a>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Icon Links",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [],
+    "blocks": [
+      {
+        "type": "icon_links",
+        "name": "Links",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "default": "Title",
+            "label": "Title",
+            "info": "title"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Icon"
+          },
+          {
+            "type": "url",
+            "id": "url",
+            "label": "URL"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Icon Links",
+        "blocks": [
+          {
+            "type": "icon_links"
+          },
+          {
+            "type": "icon_links"
+          },
+          {
+            "type": "icon_links"
+          }
+        ]
+      }
+    ]
+  }
+  {% endschema %}
+  

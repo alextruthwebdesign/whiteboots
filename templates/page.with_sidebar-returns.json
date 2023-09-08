@@ -1,0 +1,131 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ed1e1213-06ac-4619-87d1-eeecafa0400b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Returns<\/h2>",
+            "heading_size": "h1"
+          }
+        },
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All returns must be pre-approved by White’s Return Department. A return authorization (RA) number can be obtained by emailing or calling our Customer Service Department at <a href=\"tel:8005413786\">(800) 541-3786<\/a>, or filling out the form below.<\/p>"
+          }
+        },
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-0",
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-1",
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-2"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "2dd29bdb-e654-4ba5-ad2a-15f675aeaf25": {
+      "type": "returns-form",
+      "settings": {
+        "before_text": "<p>All returned merchandise must be shipped prepaid by the customer to:<\/p>",
+        "address": "<h2>White's Boots<\/h2><p><a href=\"https:\/\/www.google.com\/maps\/place\/4002%20E%20Ferry%20Ave.%20Spokane,%20WA%2099202\" target=\"_blank\">4002 E Ferry Ave.<br\/>Spokane, WA 99202<\/a><a href=\"tel:800-541-3786\"><br\/><br\/><strong>800-541-3786<\/strong><\/a><\/p>",
+        "after_text": "<p><em><strong>Please clearly mark the RA number on the outside of the shipping container.<\/strong><\/em><\/p>",
+        "show_store_hours": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "13905481-5a70-4484-bf17-d93edee041b7": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHAT IS YOUR RETURN POLICY?",
+            "row_content": "<p>If your boots don’t fit or your boots fall under our Limited Warranty, you may return your order to receive a refund equal to the amount paid for the product(s) being returned. White’s Boots does not refund shipping costs. <a href=\"\/pages\/warranty\" title=\"\/pages\/warranty\">Learn more about our warranty process here.<\/a><\/p><p>Sizing returns must be in original condition (new and unused) in order to be eligible for a refund.<\/p>"
+          }
+        },
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW DO I RETURN MY ORDER?",
+            "row_content": "<p>Please contact our Customer Service team by email at <a href=\"mailto:service@whitesboots.com\" title=\"mailto:service@whitesboots.com\">service@whitesboots.com<\/a> or call <a href=\"tel:800-541-3786\" title=\"tel:800-541-3786\">800-541-3786<\/a> to request a RMA#. Complete ourReturns Formand place it inside the package before shipping.<\/p>"
+          }
+        },
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW LONG DO I HAVE TO RETURN MY BOOTS?",
+            "row_content": "<p>All return boots must be sent back within 90 days of receiving themin order to be eligible for a refund.<\/p>"
+          }
+        },
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "CAN I EXCHANGE MY BOOTS FOR A DIFFERENT SIZE?",
+            "row_content": "<p>Yes, if your boots don’t fit, you may return your order to receive a refund equal to the amount paid for the product(s) being returned. White’s Boots does not refund shipping costs.<\/p><p>Sizing returns must be in original condition (new and unused) in order to be eligible for a refund.<\/p>"
+          }
+        },
+        "98d918dd-3b62-495a-9e82-091ecd6fcf65": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "CAN I RETURN A MADE-TO-ORDER BOOT?",
+            "row_content": "<p>Manufacturer defects – Yes, please review our <a href=\"\/pages\/warranty\" title=\"\/pages\/warranty\">Warranty<\/a><strong>.<\/strong><\/p><p>Sizing – In order to be eligible for a made-to-order boot return due to sizing, you must provide us measurements before placing an order. White’s Boots is not responsible for sizing issues unless our team is involved in determining that size.<\/p>"
+          }
+        },
+        "86c41c78-765c-4164-bd9d-c8b1e201008b": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "I PURCHASED MY BOOTS AT AN AUTHORIZED DEALER, CAN I RETURN THEM TO WHITE’S BOOTS?",
+            "row_content": "<p>No, please contact the dealer to discuss your return options. If they are not able to assist you in a return, and the product is still in original condition (new and unused), you can contact our Customer Service by email at <a href=\"mailto:service@whitesboots.com\" title=\"mailto:service@whitesboots.com\">service@whitesboots.com<\/a> to discuss options.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-0",
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-1",
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-2",
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-3",
+        "98d918dd-3b62-495a-9e82-091ecd6fcf65",
+        "86c41c78-765c-4164-bd9d-c8b1e201008b"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "open_first_collapsible_row": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ed1e1213-06ac-4619-87d1-eeecafa0400b",
+    "2dd29bdb-e654-4ba5-ad2a-15f675aeaf25",
+    "13905481-5a70-4484-bf17-d93edee041b7"
+  ]
+}

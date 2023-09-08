@@ -1,0 +1,255 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "fca71661-da8a-4909-86a2-fddb59c3fa81": {
+      "type": "hero",
+      "blocks": {
+        "2e0faa44-5be7-4c13-a5af-59c42eb948a5": {
+          "type": "heading",
+          "settings": {
+            "heading": "Construction",
+            "heading_size": "h1"
+          }
+        },
+        "8806e417-607d-4514-9040-dce4a79f30ef": {
+          "type": "text",
+          "settings": {
+            "text": "The value of an Old World work boot—the custom fit, the comfort, and the durability—comes down to how many steps of the process are administered by hand. An authentic White’s boot is not just sewn by hand, it passess through skilled hands at every stage of the construction process",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "2e0faa44-5be7-4c13-a5af-59c42eb948a5",
+        "8806e417-607d-4514-9040-dce4a79f30ef"
+      ],
+      "settings": {
+        "section_width": false,
+        "yt_video_id": "",
+        "image": "shopify:\/\/shop_images\/construction-hero-image.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "9e904d98-4b35-4090-9aed-e25bb2570eff": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19182346174781__9e904d98-4b35-4090-9aed-e25bb2570eff-16848400789bead9fc-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Handsewn Stitchdown",
+            "heading_size": "h1"
+          }
+        },
+        "template--19182346174781__9e904d98-4b35-4090-9aed-e25bb2570eff-16848400789bead9fc-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The finest boots we make at White’s are built as true hand-sewn stitchdown boots. This means that each boot is hand-lasted, hand-welted, and hand-bottomed by one of our master bootmakers, a process that involves more than 25 unique stages, each performed by hand.<\/p><p>A hand-lasted boot offers the wearer a truly customized fit, as the leather is stretched and secured around the last by hand, ensuring that the boot provides support to every part of the wearer’s foot. In addition, the leather we use for our hand-sewn stitchdown boots is cut from the best portion of our hides, lending both superior flexibility and durability to the finished product – as this boot breaks in, it molds to fit the shape of the individual foot, just like a second skin, becoming more comfortable by the day.<\/p><p>The hand-welting process, however, is what sets White’s Boots apart. Since our founding in 1853, we have been perfecting and protecting the practice of one of boot-making’s oldest and most technically demanding skills: hand-welting. During the hand-welting process, the bootmaker uses an awl and thread to stitch the vamp (the piece of leather that comprises the toe and main body of the upper) directly into the insole of the boot, 3 stitches to the inch. In addition to removing the need for either the canvas welt strip associated with a Goodyear Welt, or the glue associated with a Stitchdown or clampdown, a hand-welt is by far the most durable construction type available, and is entirely rebuildable.<\/p><p>Buying a White’s hand-sewn stitchdown boot is stepping into a long history of craft, dedication, and old-world quality that is increasingly rare, and enduringly valuable.<\/p>",
+            "text_style": "body",
+            "bg_style": "transparent"
+          }
+        },
+        "c149cf48-2a25-4892-acfe-e521dcfd68ea": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>Hand-Sewn<\/strong><\/li><li><strong>Stitchdown Construction<\/strong><\/li><li><strong>Rebuildable \/ Resoleable<\/strong><\/li><li><strong>CustomizableFor more information, please call our order department at 800-541-3786.<\/strong><\/li><li><strong>Built to Last<\/strong><\/li><\/ul>",
+            "text_style": "body",
+            "bg_style": "brown"
+          }
+        }
+      },
+      "block_order": [
+        "template--19182346174781__9e904d98-4b35-4090-9aed-e25bb2570eff-16848400789bead9fc-0",
+        "template--19182346174781__9e904d98-4b35-4090-9aed-e25bb2570eff-16848400789bead9fc-1",
+        "c149cf48-2a25-4892-acfe-e521dcfd68ea"
+      ],
+      "custom_css": [
+        ".image-with-text {max-width: 2200px;}",
+        ".image-with-text__content {padding-left: 0;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hand-sewn-stitchdown.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "transparent",
+        "mobile_content_alignment": "left",
+        "padding_top": 100,
+        "padding_bottom": 40
+      }
+    },
+    "37859306-1164-43b1-8083-d70957f8004f": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19182346174781__37859306-1164-43b1-8083-d70957f8004f-16848463904a42f770-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Stitchdown",
+            "heading_size": "h1"
+          }
+        },
+        "template--19182346174781__37859306-1164-43b1-8083-d70957f8004f-16848463904a42f770-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our stitchdown construction type offers a more secure fit and feel than a Goodyear Welted boot, but takes much less time to manufacture than our true hand-sewn stitchdowns. Still hand-lasted and hand-bottomed, the liner of our stitchdown boots is glued down or stitched down (using a Mckay lock-stitch) to the bottom of the insole. Then the vamp is turned out, and the midsole and bottom are machine-stitched together through the vamp. Removing the hand-welting process shortens the production time significantly, allowing us to offer a rugged, comfortable boot without the high price of a truly hand-sewn boot.<\/p>",
+            "text_style": "body",
+            "bg_style": "transparent"
+          }
+        },
+        "0b84ca78-8abd-4e85-8334-9c6dcbb1b5c0": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>Stitchdown Construction<\/strong><\/li><li><strong>Rebuildable \/ Resoleable<\/strong><\/li><li><strong>CustomizableFor more information, please call our order department at 800-541-3786.<\/strong><\/li><li><strong>Built to Last<\/strong><\/li><\/ul>",
+            "text_style": "body",
+            "bg_style": "brown"
+          }
+        }
+      },
+      "block_order": [
+        "template--19182346174781__37859306-1164-43b1-8083-d70957f8004f-16848463904a42f770-0",
+        "template--19182346174781__37859306-1164-43b1-8083-d70957f8004f-16848463904a42f770-1",
+        "0b84ca78-8abd-4e85-8334-9c6dcbb1b5c0"
+      ],
+      "custom_css": [
+        ".image-with-text {max-width: 2200px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/stitchdown.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-3",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "02e556d6-9794-4b4d-8129-eb0744664370": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19182346174781__02e556d6-9794-4b4d-8129-eb0744664370-1684846818204694da-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Goodyear Welt",
+            "heading_size": "h1"
+          }
+        },
+        "template--19182346174781__02e556d6-9794-4b4d-8129-eb0744664370-1684846818204694da-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A Goodyear welt, the gold standard of boot construction at most companies, is a hallmark of quality at an affordable price at White’s.<\/p><p>A Goodyear welt is machine stitched, making production fast and precise. But all that speed can easily affect comfort, as synthetic materials replace the all-leather construction that our hand-sewing process requires—that’s why we’ve gentrified the fast and ready Goodyear welt with a thorough hand-bottoming at the hands of our master bootmakers. With an all leather shank, and an all leather midsole, our Goodyear welted boots boast the off-the-shelf readiness of a boot half their price and the comfort of a boot twice their price.<\/p><p>It takes a master to adopt new designs while maintaining old world techniques, and that’s what we’ve done. When faced with the choice between modern style and heirloom quality, we chose both. Now you can too.<\/p>",
+            "text_style": "body",
+            "bg_style": "transparent"
+          }
+        },
+        "8da58a24-6a5e-42ef-8e34-9cb36b9e4e0c": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>Resoleable<\/strong><\/li><li><strong>Built to Last<\/strong><\/li><li><strong>CustomizableFor more information, please call our order department at 800-541-3786.<\/strong><\/li><\/ul>",
+            "text_style": "body",
+            "bg_style": "brown"
+          }
+        }
+      },
+      "block_order": [
+        "template--19182346174781__02e556d6-9794-4b4d-8129-eb0744664370-1684846818204694da-0",
+        "template--19182346174781__02e556d6-9794-4b4d-8129-eb0744664370-1684846818204694da-1",
+        "8da58a24-6a5e-42ef-8e34-9cb36b9e4e0c"
+      ],
+      "custom_css": [
+        ".image-with-text {max-width: 2200px;}",
+        ".image-with-text__content {padding-left: 0;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/goodyear-welt.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "transparent",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1ce468bf-d33e-4da8-a5af-da139545e412": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19182346174781__1ce468bf-d33e-4da8-a5af-da139545e412-1684846818204694da-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Nail Bottom",
+            "heading_size": "h1"
+          }
+        },
+        "template--19182346174781__1ce468bf-d33e-4da8-a5af-da139545e412-1684846818204694da-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nail Bottom is a construction type traditionally used in producing calked logging boots and lineman boots – White’s has been using it since the beginning. When bottoming the boot, the bootmaker folds the vamp under the last, instead of outward, securing it in place with nails.<\/p>",
+            "text_style": "body",
+            "bg_style": "transparent"
+          }
+        },
+        "124ce8ef-5e03-496f-9dd8-2cbb88acef51": {
+          "type": "text",
+          "settings": {
+            "text": "<ul><li><strong>Stitchdown Construction<\/strong><\/li><li><strong>Rebuildable \/ Resoleable<\/strong><\/li><li><strong>CustomizableFor more information, please call our order department at 800-541-3786.<\/strong><\/li><li><strong>Built to Last<\/strong><\/li><\/ul>",
+            "text_style": "body",
+            "bg_style": "brown"
+          }
+        }
+      },
+      "block_order": [
+        "template--19182346174781__1ce468bf-d33e-4da8-a5af-da139545e412-1684846818204694da-0",
+        "template--19182346174781__1ce468bf-d33e-4da8-a5af-da139545e412-1684846818204694da-1",
+        "124ce8ef-5e03-496f-9dd8-2cbb88acef51"
+      ],
+      "custom_css": [
+        ".image-with-text {max-width: 2200px;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/nailbottom.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-3",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "fca71661-da8a-4909-86a2-fddb59c3fa81",
+    "9e904d98-4b35-4090-9aed-e25bb2570eff",
+    "37859306-1164-43b1-8083-d70957f8004f",
+    "02e556d6-9794-4b4d-8129-eb0744664370",
+    "1ce468bf-d33e-4da8-a5af-da139545e412"
+  ]
+}

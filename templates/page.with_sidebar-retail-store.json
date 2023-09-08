@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "c823dbc0-22f2-4bbd-a047-4dddb643c9a5": {
+      "type": "retail-store",
+      "settings": {
+        "heading": "Retail Store",
+        "text": "<p>Visit our showroom in Spokane, Washington to get fitted by our specialists, shop our collection of outdoor gear, and watch our bootmakers ply their trade!<\/p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c823dbc0-22f2-4bbd-a047-4dddb643c9a5"
+  ]
+}

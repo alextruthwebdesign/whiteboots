@@ -1,0 +1,217 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "65fff80c-0a5f-4c74-82ff-7e174fc10d13": {
+      "type": "icon-links",
+      "blocks": {
+        "template--18945828979005__65fff80c-0a5f-4c74-82ff-7e174fc10d13-1683280825656e191d-0": {
+          "type": "icon_links",
+          "settings": {
+            "title": "Returns",
+            "icon": "shopify:\/\/shop_images\/return.svg",
+            "url": "#"
+          }
+        },
+        "template--18945828979005__65fff80c-0a5f-4c74-82ff-7e174fc10d13-1683280825656e191d-1": {
+          "type": "icon_links",
+          "settings": {
+            "title": "Repairs",
+            "icon": "shopify:\/\/shop_images\/repairs.svg",
+            "url": "#"
+          }
+        },
+        "template--18945828979005__65fff80c-0a5f-4c74-82ff-7e174fc10d13-1683280825656e191d-2": {
+          "type": "icon_links",
+          "settings": {
+            "title": "Order & Shipping",
+            "icon": "shopify:\/\/shop_images\/order-shipping.svg",
+            "url": "#"
+          }
+        },
+        "79f42d8c-74e1-43b8-a6e3-528f51f179ed": {
+          "type": "icon_links",
+          "settings": {
+            "title": "Warranty",
+            "icon": "shopify:\/\/shop_images\/warranty.svg",
+            "url": "#"
+          }
+        },
+        "171532c7-ca85-49b7-bc07-7920f368e17d": {
+          "type": "icon_links",
+          "settings": {
+            "title": "Product & Sizing",
+            "icon": "shopify:\/\/shop_images\/product-sizing.svg",
+            "url": "#"
+          }
+        },
+        "46ea35b5-9b43-449e-b059-65a17b9959bd": {
+          "type": "icon_links",
+          "settings": {
+            "title": "Boot Care",
+            "icon": "shopify:\/\/shop_images\/boot-care.svg",
+            "url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "template--18945828979005__65fff80c-0a5f-4c74-82ff-7e174fc10d13-1683280825656e191d-0",
+        "template--18945828979005__65fff80c-0a5f-4c74-82ff-7e174fc10d13-1683280825656e191d-1",
+        "template--18945828979005__65fff80c-0a5f-4c74-82ff-7e174fc10d13-1683280825656e191d-2",
+        "79f42d8c-74e1-43b8-a6e3-528f51f179ed",
+        "171532c7-ca85-49b7-bc07-7920f368e17d",
+        "46ea35b5-9b43-449e-b059-65a17b9959bd"
+      ],
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "disabled": true,
+      "settings": {
+        "address": "",
+        "show_store_hours": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ed1e1213-06ac-4619-87d1-eeecafa0400b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Product & Sizing<\/h2>",
+            "heading_size": "h1"
+          }
+        },
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For more information about our products and sizing, or special help with a new or existing order, please call our customer service department at 800-541-3786. Our hours are Monday-Friday, 8 am to 5 pm PST.<\/p>"
+          }
+        },
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-0",
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-1",
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-2"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 16
+      }
+    },
+    "55b2b0b8-6811-4a62-92d3-ccdb8fd17d76": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--18945828979005__55b2b0b8-6811-4a62-92d3-ccdb8fd17d76-16832746128821af20-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW DO I DETERMINE MY WHITE’S BOOTS SIZE?",
+            "row_content": "<p>White’s Boots has one of the largest selection of foot size patterns (Lasts) available. Almost all sizes from 4 to 16, in widths AAA to FF, in a number of different Last styles.<\/p><p>To ensure the most accurate fit, we recommend completing our measurement form found in our annual catalog. <a href=\"https:\/\/whitesboots.com\/catalog\">Request yours here<\/a>. Once complete, send your measurements to our team using the provided envelope. Once we receive them, our fitting experts will examine the measurements, determine your size, and a customer account will be created. You will be contacted by our Orders Department in the order in which we received the measurements, typically 2-3 weeks from the time it is sent.<\/p><p>Our online Fitting Guide is a great way to determine whether your measurements fall within our stock sizing chart. Visit our Fitting Guide and follow the step-by-step instruction to find your length and width. If your measurements fall outside of our stock sizing, we recommend completing a physical measurement form found in our <a href=\"https:\/\/whitesboots.com\/catalog\">catalog<\/a>.<\/p>"
+          }
+        },
+        "template--18945828979005__55b2b0b8-6811-4a62-92d3-ccdb8fd17d76-16832746128821af20-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW SHOULD MY BOOTS FIT?",
+            "row_content": "<p>Lace boots snugly, on both feet, then while standing, with full weight on feet, check the toe length. You should be have 1\/2” to ¾” space at the end of the toes. This should place the ball of your foot at the ball of the boot. You will note that you have loose leather over the toes. This will drawn down to quite an extent as the boots are worn. Your boots should fit quite snugly, from the ball back through the heel. Your feet will feel as though they were bandaged up around the middle, because of the narrow shank and high arch. We like to have our boots fit a little on the snug side, and be sure you have the toe length recommended above. Your boots will shorten in length, and get somewhat wider as worn.<\/p>"
+          }
+        },
+        "template--18945828979005__55b2b0b8-6811-4a62-92d3-ccdb8fd17d76-16832746128821af20-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "DO YOU OFFER CUSTOM FITTING SERVICES?",
+            "row_content": "<p>Yes, we’ve been offering custom boot fitting services since for over 165 years. If you require a special size pattern that does not exist, we make them up for you. White’s Boots provides many people with the first opportunity they have ever had to get work boots in the size they should have.<\/p>"
+          }
+        },
+        "37889adf-bdf1-4b6f-8393-13a28700c721": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "DO YOU HAVE WOMEN’S SIZING INFORMATION ON THE WEBSITE?",
+            "row_content": "<p>Yes, our <a href=\"\/pages\/fitting\" title=\"\/pages\/fitting\">Fitting Guide <\/a>will provide both men’s and women’s sizing, based on the measurements you input. The ‘Find Your Size’ tool found on all women’s product pages will recommend appropriate sizing.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18945828979005__55b2b0b8-6811-4a62-92d3-ccdb8fd17d76-16832746128821af20-0",
+        "template--18945828979005__55b2b0b8-6811-4a62-92d3-ccdb8fd17d76-16832746128821af20-1",
+        "template--18945828979005__55b2b0b8-6811-4a62-92d3-ccdb8fd17d76-16832746128821af20-2",
+        "37889adf-bdf1-4b6f-8393-13a28700c721"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "open_first_collapsible_row": true
+      }
+    },
+    "62321c9d-9514-47f1-b438-4310bb3576f3": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--18945828979005__62321c9d-9514-47f1-b438-4310bb3576f3-16832778807a21699c-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHAT IS YOUR REPAIR POLICY?",
+            "row_content": "<p>In order to guarantee the best possible outcome for your repair, we will only accept White’s Boots at this time.<\/p>"
+          }
+        },
+        "template--18945828979005__62321c9d-9514-47f1-b438-4310bb3576f3-16832778807a21699c-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW DO I SEND MY BOOTS IN FOR A RESOLE OR REBUILD?",
+            "row_content": "<p>Please visit our <a href=\"https:\/\/whitesboots.com\/repairs\">Repairs page<\/a>, download and complete our Repair Form. Send the repair form along with your boots to:<\/p><p>Attn: White’s Boots Repairs<\/p><p>4002 E Ferry Ave<\/p><p>Spokane, WA 99202<\/p><p>White’s Boots is not responsible for packages lost in transit.<\/p>"
+          }
+        },
+        "template--18945828979005__62321c9d-9514-47f1-b438-4310bb3576f3-16832778807a21699c-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHICH BOOT STYLES CAN BE REBUILT?",
+            "row_content": "<p>All of our premium <a href=\"https:\/\/shop.whitesboots.com\/all-boots\/#filters=15_4\">Handsewn Stitchdown <\/a>styles and standard <a href=\"https:\/\/shop.whitesboots.com\/all-boots\/#filters=16_4\">Stitchdown <\/a>styles can be fully rebuilt.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--18945828979005__62321c9d-9514-47f1-b438-4310bb3576f3-16832778807a21699c-0",
+        "template--18945828979005__62321c9d-9514-47f1-b438-4310bb3576f3-16832778807a21699c-1",
+        "template--18945828979005__62321c9d-9514-47f1-b438-4310bb3576f3-16832778807a21699c-2"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "Repairs",
+        "open_first_collapsible_row": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "65fff80c-0a5f-4c74-82ff-7e174fc10d13",
+    "form",
+    "ed1e1213-06ac-4619-87d1-eeecafa0400b",
+    "55b2b0b8-6811-4a62-92d3-ccdb8fd17d76",
+    "62321c9d-9514-47f1-b438-4310bb3576f3"
+  ]
+}

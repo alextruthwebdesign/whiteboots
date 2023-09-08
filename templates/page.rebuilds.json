@@ -1,0 +1,251 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "cf7e7bd0-249a-4427-84cc-3254b5e63086": {
+      "type": "hero",
+      "blocks": {
+        "b578c204-6fd0-416c-9173-c49684749f24": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rebuilds",
+            "heading_size": "h1"
+          }
+        },
+        "df79cff3-8128-4f75-abd1-a48a9661b6a9": {
+          "type": "text",
+          "settings": {
+            "text": "One remarkable advantage of investing in our boots is that they are rebuildable. By eliminating synthetic material and fillers, White’s all-leather construction enables worn-out boots to be returned to like-new condition.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "b578c204-6fd0-416c-9173-c49684749f24",
+        "df79cff3-8128-4f75-abd1-a48a9661b6a9"
+      ],
+      "settings": {
+        "section_width": false,
+        "yt_video_id": "8jh822kFFQE",
+        "image_overlay_opacity": 0,
+        "image_height": "small",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "e1f14444-9ab1-48c8-b8e5-86d031132681": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19166508548413__e1f14444-9ab1-48c8-b8e5-86d031132681-1684820137470b8e0e-0": {
+          "type": "column",
+          "settings": {
+            "just_image": false,
+            "title": "Investment",
+            "text": "<p>You’ll receive years of service from your rebuilt boots, just as you would from a new pair of boots.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19166508548413__e1f14444-9ab1-48c8-b8e5-86d031132681-1684820137470b8e0e-1": {
+          "type": "column",
+          "settings": {
+            "just_image": false,
+            "title": "Comfort",
+            "text": "<p>White’s rebuilds your boots on the original last (mold) to maintain our legendary “Arch-Ease” support.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19166508548413__e1f14444-9ab1-48c8-b8e5-86d031132681-1684820137470b8e0e-2": {
+          "type": "column",
+          "settings": {
+            "just_image": false,
+            "title": "Quality Materials",
+            "text": "<p>Rebuilt boots are made of the same heavy-duty materials we use to make our new boots.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "c78b443f-2cd4-4233-9bea-6e7108d72485": {
+          "type": "column",
+          "settings": {
+            "just_image": false,
+            "title": "Quality Workmanship",
+            "text": "<p>Our craftsmen treat every boot with the same care, rebuild and brand new build alike – you’ll recognize the same time-proven quality in your rebuilt boots as you did in your first pair of White’s Boots.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "0286b62f-fe67-41eb-a962-d03a67acb9af": {
+          "type": "column",
+          "settings": {
+            "just_image": false,
+            "title": "Price",
+            "text": "<p>For a lower price than the cost of a brand new boot, we can replace every component of your boot except the upper quarters – that means worn-out insoles, midsoles, outsoles, heels, toe-leather, and heel-leather can all be replaced at a fraction of the cost of a brand new boot.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "3d682e3e-7524-4f6f-b767-9cdc78abbae1": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/rebuild-boot-after_8167508e-5552-46d7-a1d8-f87c7cab5daf.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19166508548413__e1f14444-9ab1-48c8-b8e5-86d031132681-1684820137470b8e0e-0",
+        "template--19166508548413__e1f14444-9ab1-48c8-b8e5-86d031132681-1684820137470b8e0e-1",
+        "template--19166508548413__e1f14444-9ab1-48c8-b8e5-86d031132681-1684820137470b8e0e-2",
+        "c78b443f-2cd4-4233-9bea-6e7108d72485",
+        "0286b62f-fe67-41eb-a962-d03a67acb9af",
+        "3d682e3e-7524-4f6f-b767-9cdc78abbae1"
+      ],
+      "custom_css": [
+        ".multicolumn-list {--grid-desktop-horizontal-spacing: 30px; --grid-desktop-vertical-spacing: 30px;}"
+      ],
+      "settings": {
+        "title": "5 Reasons to Have Your Boots Rebuilt",
+        "text": "<p>Same quality leathers, same durable result - the only thing better than reaching for your favorite pair of boots is knowing you'll never have to part with them.<\/p>",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "content_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "2287fd0e-d53e-4eff-a167-fcc4fa81c31c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19166508548413__2287fd0e-d53e-4eff-a167-fcc4fa81c31c-1684823869624d8aab-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Sending Boots In For Repair?<\/p>",
+            "heading_size": "h1",
+            "right_text": ""
+          }
+        },
+        "template--19166508548413__2287fd0e-d53e-4eff-a167-fcc4fa81c31c-1684823869624d8aab-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Complete the form below and send it with your boots to Attn: Repairs, 4002 E Ferry Ave. Spokane, WA 99202. Our repair lead times fluctuate throughout the year, with busy times typically leading up to summer. Once your boots have been assessed and before we start the repair, you will receive an email with a Sales Order. If you have questions, please contact our Repairs Department by email at repairs@whitesboots.com or by calling 800-541-3786.<br\/><br\/><\/p>"
+          }
+        },
+        "template--19166508548413__2287fd0e-d53e-4eff-a167-fcc4fa81c31c-1684823869624d8aab-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "BOOT REPAIR FORM",
+            "button_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0727\/1183\/1869\/files\/repair-form.pdf?v=1684758944",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19166508548413__2287fd0e-d53e-4eff-a167-fcc4fa81c31c-1684823869624d8aab-0",
+        "template--19166508548413__2287fd0e-d53e-4eff-a167-fcc4fa81c31c-1684823869624d8aab-1",
+        "template--19166508548413__2287fd0e-d53e-4eff-a167-fcc4fa81c31c-1684823869624d8aab-2"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "full_width": false,
+        "small_width": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "2d531a0e-a694-4e05-8319-0c0003421e84": {
+      "type": "image-banner",
+      "blocks": {
+        "template--19166508548413__2d531a0e-a694-4e05-8319-0c0003421e84-1684824177179ec690-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "STORIES FROM OUR CUSTOMERS",
+            "heading_size": "h1"
+          }
+        },
+        "template--19166508548413__2d531a0e-a694-4e05-8319-0c0003421e84-1684824177179ec690-1": {
+          "type": "text",
+          "settings": {
+            "text": "“Will you do what it takes to rebuild these boots. I am 1.5 years from retirement and would like to make it with these boots. I realize that the uppers are at the ends of their life, but would you do your best. They are my best fitting boot, and wear them almost daily. These boots have been my best investment for work.”",
+            "text_style": "body"
+          }
+        },
+        "template--19166508548413__2d531a0e-a694-4e05-8319-0c0003421e84-1684824177179ec690-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19166508548413__2d531a0e-a694-4e05-8319-0c0003421e84-1684824177179ec690-0",
+        "template--19166508548413__2d531a0e-a694-4e05-8319-0c0003421e84-1684824177179ec690-1",
+        "template--19166508548413__2d531a0e-a694-4e05-8319-0c0003421e84-1684824177179ec690-2"
+      ],
+      "settings": {
+        "section_width": false,
+        "image": "shopify:\/\/shop_images\/customer-stories-hero.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "fd08acd5-3661-4c29-b28c-1e19da4b10dd": {
+      "type": "share-your-story",
+      "settings": {
+        "heading": "Share Your Story",
+        "text": "<p>Everyone’s story is different and unique, and we’d love to hear yours. Please provide your name, email, and a brief story of your White’s Boots rebuild. We’ll be happy to get back to you to hear more of your tale, and discuss featuring your story on our website.<\/p>",
+        "image": "shopify:\/\/shop_images\/share-your-story-inset-image_2x_d7e3671b-e339-40f0-ac53-f09c3164cd83.jpg",
+        "after_image_text": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cf7e7bd0-249a-4427-84cc-3254b5e63086",
+    "e1f14444-9ab1-48c8-b8e5-86d031132681",
+    "2287fd0e-d53e-4eff-a167-fcc4fa81c31c",
+    "2d531a0e-a694-4e05-8319-0c0003421e84",
+    "fd08acd5-3661-4c29-b28c-1e19da4b10dd"
+  ]
+}

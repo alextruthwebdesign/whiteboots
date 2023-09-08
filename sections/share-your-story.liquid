@@ -1,0 +1,89 @@
+{{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
+
+{%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
+  {%- style -%}
+    @media screen and (max-width: 749px) {
+      #Banner-{{ section.id }}::before,
+      #Banner-{{ section.id }} .banner__media::before,
+      #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+        content: '';
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      #Banner-{{ section.id }}::before,
+      #Banner-{{ section.id }} .banner__media::before {
+        padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
+        content: '';
+        display: block;
+      }
+    }
+  {%- endstyle -%}
+{%- endif -%}
+
+{%- style -%}
+  #Banner-{{ section.id }}::after {
+    opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+  }
+{%- endstyle -%}
+
+
+<div class="share-your-story">
+    <div class="inner">
+        <div class="header-block">
+            <h2 class="kaffeesatz-bold">{{ section.settings.heading }}</h2>
+            {{ section.settings.text }}
+        </div>
+        <div class="form-wrapper">
+            <div class="klaviyo-form-ShQd7D"></div>
+            <div class="klaviyo-form-ShQd7D klaviyo-form form-version-cid-1"><div class="needsclick  kl-private-reset-css-Xuajs1" style="transform: translate(0px, 0px);"><form class="needsclick klaviyo-form klaviyo-form-version-cid_1 kl-private-reset-css-Xuajs1" data-testid="klaviyo-form-ShQd7D" novalidate="" tabindex="-1" style="display: flex; flex-direction: row; box-sizing: border-box; width: 100%; overflow: visible; float: left; border-radius: 0px; border-style: none; border-width: 0px; border-color: rgb(0, 0, 0); background-color: rgb(231, 228, 218); background-repeat: no-repeat; background-position-y: 50%; padding: 30px; flex: 1 1 0%;"><div class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; flex-direction: column; width: 100%; margin: 0px; padding: 0px; min-height: 400px; justify-content: center;"><div data-testid="form-row" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; flex-direction: row; align-items: stretch; position: relative;"><div component="[object Object]" data-testid="form-component" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; justify-content: flex-start; padding: 10px 0px; position: relative; flex: 1 0 0px;"><div class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; flex-grow: 1; flex-direction: column; align-self: flex-end;"><label id="label-first_name_65296966" for="first_name_65296966" class="needsclick  kl-private-reset-css-Xuajs1" style="color: rgb(29, 29, 29); font-family: futura-pt, &quot;Century Gothic&quot;, CenturyGothic, AppleGothic, sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0px; padding-bottom: 6px;">First Name*</label><input id="first_name_65296966" class="needsclick go1946091059 kl-private-reset-css-Xuajs1" type="text" autocomplete="given-name" tabindex="0" placeholder="" aria-labelledby="label-first_name_65296966" aria-invalid="false" options="[object Object]" style="box-sizing: border-box; border-radius: 0px; padding: 0px 0px 0px 16px; height: 50px; text-align: left; color: rgb(29, 29, 29); font-family: futura-pt, &quot;Century Gothic&quot;, CenturyGothic, AppleGothic, sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0px; background-color: rgba(255, 255, 255, 0); border: 1px solid rgb(191, 190, 184);"><div class="needsclick  kl-private-reset-css-Xuajs1" style="width: 100%; position: relative;"></div></div></div></div><div data-testid="form-row" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; flex-direction: row; align-items: stretch; position: relative;"><div component="[object Object]" data-testid="form-component" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; justify-content: flex-start; padding: 10px 0px; position: relative; flex: 1 0 0px;"><div class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; flex-grow: 1; flex-direction: column; align-self: flex-end;"><label id="label-last_name_65296967" for="last_name_65296967" class="needsclick  kl-private-reset-css-Xuajs1" style="color: rgb(29, 29, 29); font-family: futura-pt, &quot;Century Gothic&quot;, CenturyGothic, AppleGothic, sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0px; padding-bottom: 6px;">Last Name*</label><input id="last_name_65296967" class="needsclick go1946091059 kl-private-reset-css-Xuajs1" type="text" autocomplete="family-name" tabindex="0" placeholder="" aria-labelledby="label-last_name_65296967" aria-invalid="false" options="[object Object]" style="box-sizing: border-box; border-radius: 0px; padding: 0px 0px 0px 16px; height: 50px; text-align: left; color: rgb(29, 29, 29); font-family: futura-pt, &quot;Century Gothic&quot;, CenturyGothic, AppleGothic, sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0px; background-color: rgba(255, 255, 255, 0); border: 1px solid rgb(191, 190, 184);"><div class="needsclick  kl-private-reset-css-Xuajs1" style="width: 100%; position: relative;"></div></div></div></div><div data-testid="form-row" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; flex-direction: row; align-items: stretch; position: relative;"><div component="[object Object]" data-testid="form-component" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; justify-content: flex-start; padding: 10px 0px; position: relative; flex: 1 0 0px;"><div class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; flex-grow: 1; flex-direction: column; align-self: flex-end;"><label id="label-email_65296968" for="email_65296968" class="needsclick  kl-private-reset-css-Xuajs1" style="color: rgb(29, 29, 29); font-family: futura-pt, &quot;Century Gothic&quot;, CenturyGothic, AppleGothic, sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0px; padding-bottom: 6px;">Email*</label><input id="email_65296968" class="needsclick go1946091059 kl-private-reset-css-Xuajs1" type="email" autocomplete="email" name="email" tabindex="0" placeholder="" aria-labelledby="label-email_65296968" aria-invalid="false" options="[object Object]" style="box-sizing: border-box; border-radius: 0px; padding: 0px 0px 0px 16px; height: 50px; text-align: left; color: rgb(29, 29, 29); font-family: futura-pt, &quot;Century Gothic&quot;, CenturyGothic, AppleGothic, sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0px; background-color: rgba(255, 255, 255, 0); border: 1px solid rgb(191, 190, 184);"><div class="needsclick  kl-private-reset-css-Xuajs1" style="width: 100%; position: relative;"></div></div></div></div><div data-testid="form-row" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; flex-direction: row; align-items: stretch; position: relative;"><div component="[object Object]" data-testid="form-component" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; justify-content: flex-start; padding: 10px 0px 20px; position: relative; flex: 1 0 0px;"><div class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; flex-grow: 1; flex-direction: column; align-self: flex-end;"><label id="label-Rebuilds_Story_65296969" for="Rebuilds_Story_65296969" class="needsclick  kl-private-reset-css-Xuajs1" style="color: rgb(29, 29, 29); font-family: futura-pt, &quot;Century Gothic&quot;, CenturyGothic, AppleGothic, sans-serif; font-size: 16px; font-weight: 700; letter-spacing: 0px; padding-bottom: 6px;">Message*</label><input id="Rebuilds_Story_65296969" class="needsclick go1946091059 kl-private-reset-css-Xuajs1" type="text" tabindex="0" placeholder="" aria-labelledby="label-Rebuilds_Story_65296969" aria-invalid="false" options="[object Object]" style="box-sizing: border-box; border-radius: 0px; padding: 0px 0px 0px 16px; height: 50px; text-align: left; color: rgb(29, 29, 29); font-family: futura-pt, &quot;Century Gothic&quot;, CenturyGothic, AppleGothic, sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0px; background-color: rgba(255, 255, 255, 0); border: 1px solid rgb(191, 190, 184);"><div class="needsclick  kl-private-reset-css-Xuajs1" style="width: 100%; position: relative;"></div></div></div></div><div data-testid="form-row" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; flex-direction: row; align-items: stretch; position: relative;"><div component="[object Object]" data-testid="form-component" class="needsclick  kl-private-reset-css-Xuajs1" style="display: flex; justify-content: flex-start; padding: 8px 30px; position: relative; background-color: rgb(29, 29, 29); flex: 0 1 auto;"><button class="needsclick go3894874857 kl-private-reset-css-Xuajs1" type="button" tabindex="0" style="background: rgb(29, 29, 29); border-radius: 0px; border-style: none; border-color: rgb(0, 0, 0); border-width: 2px; color: rgb(255, 255, 255); font-family: &quot;Yanone Kaffeesatz&quot;, Tahoma, Verdana, Segoe, sans-serif; font-size: 16px; font-weight: 400; letter-spacing: 0px; line-height: 1; white-space: normal; padding: 0px 10px; text-align: center; word-break: break-word; align-self: flex-end; cursor: pointer; height: 30px;">SUBMIT →</button></div></div></div><input type="submit" tabindex="-1" value="Submit" style="display: none;"></form></div></div>
+            <figure class="text-center" style="margin:0;">
+            {% if section.settings.image != blank %}
+            <img src="{{ section.settings.image | img_url:'400x' }}" alt="">
+            {% endif %}
+            {{ section.settings.after_image_text }}
+            </figure>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Share Your Story",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+    },
+    {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text/Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.image-banner.settings.image.label"
+    },
+    {
+        "type": "richtext",
+        "id": "after_image_text",
+        "label": "After Image Text/Content"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Share Your Story"
+    }
+  ]
+}
+{% endschema %}

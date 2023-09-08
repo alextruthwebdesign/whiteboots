@@ -1,0 +1,121 @@
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+{%- liquid
+  assign product = section.settings.product
+
+  if section.settings.media_size == 'large'
+    assign media_width = 0.65
+  elsif section.settings.media_size == 'medium'
+    assign media_width = 0.55
+  elsif section.settings.media_size == 'small'
+    assign media_width = 0.45
+  endif
+-%}
+
+{%- capture sizes -%}
+  (min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: media_width | divided_by: desktop_columns | round }}px, (min-width: 990px) calc({{ media_width | times: 100 | divided_by: desktop_columns }}vw - 10rem), (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw / {{ mobile_columns }} - 4rem)
+{%- endcapture -%}
+
+ <section class="legacy">
+    <img src="{{ 'the-original-legacy-boots.svg' | asset_url }}" alt="">
+    {{ section.settings.heading }}
+    <div class="swiper-container-legacy">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% assign product = block.settings.product %}
+            <div class="featured-product-card swiper-slide" data-pid="C350-MV">
+              <a href="{{ product.url }}">
+                {% assign sold_out = product.metafields.custom.sold_out %}
+                {% if sold_out %}
+                  <div class="catalog-soldout">SOLD OUT</div>
+                  {% endif %}
+                {%- for media in product.media -%}
+                  {% if forloop.index == 1 %}
+                    {{ media.preview_image | image_url: width: 500 | image_tag: loading: lazy, class: 'product-image-hover' }}
+                  {% endif %}
+                  {% if forloop.index == 2 %}
+                    {{ media.preview_image | image_url: width: 500 | image_tag: loading: lazy, class: 'product-image' }}
+                  {% endif %}
+                {% endfor %}
+                <div class="product-card-content">
+                  <p class="product-last-type futura-book">{{ product.metafields.custom.overview }}</p>
+                  <h3 class="futura-bold product-card-name">{{ product.title }}</h6>
+                  <div class="product-card-details">                            
+                    <p class="product-price futura-book">
+                      {% render 'price', product: product, price_class: '' %}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+          <!-- Add Pagination -->
+          <div class="swiper-pagination-legacy"></div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+    </div>
+    <div class="button-wrapper"><a href="{{ section.settings.link }}" class="btn">{{ section.settings.button_label }} <span class="button-arrow"></span></a></div>
+</section>
+
+<script>
+    let featuredSlider = new Swiper(".swiper-container-legacy", {
+        pagination: { el: ".swiper-pagination-legacy", type: "progressbar" },
+        autoplay: { delay: 4e3 },
+        loop: !0,
+        slidesPerView: 1,
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        breakpoints: { 767: { slidesPerView: 2, spaceBetween: 10 }, 992: { slidesPerView: 3, spaceBetween: 20 }, 1300: { slidesPerView: 4, spaceBetween: 30 } },
+    });
+</script>
+
+
+{% schema %}
+{
+  "name": "Featured Products Slider",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Button label",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Button link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Products Slider"
+    }
+  ]
+}
+{% endschema %}

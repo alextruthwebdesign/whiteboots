@@ -1,0 +1,476 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "78be3652-7446-42c1-8cf0-35614d9bbe1a": {
+      "type": "featured-blog",
+      "disabled": true,
+      "settings": {
+        "heading": "THE WHITE'S DAILY",
+        "heading_size": "h2",
+        "blogs": "",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "e33054d2-8a82-4efb-8fa5-6fb345ec6712": {
+      "type": "hero",
+      "blocks": {
+        "bfbd45bb-f6b1-45f7-ad5b-aec388dd007c": {
+          "type": "heading",
+          "settings": {
+            "heading": "Our Legacy—Since 1853",
+            "heading_size": "h0"
+          }
+        },
+        "fb8c583f-e465-4d3b-8db9-2af7375e62be": {
+          "type": "text",
+          "settings": {
+            "text": "The White’s Boots legacy has been in service to the relentless spirit of the American worker, whose labor has helped the legend of our boots grow from the Pacific Northwest to those around the world.",
+            "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": [
+        "bfbd45bb-f6b1-45f7-ad5b-aec388dd007c",
+        "fb8c583f-e465-4d3b-8db9-2af7375e62be"
+      ],
+      "settings": {
+        "section_width": false,
+        "yt_video_id": "",
+        "image": "shopify:\/\/shop_images\/our-legacy-hero-image.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "dec465b5-a11b-423d-98fa-f0b96f29425d": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19179543789885__dec465b5-a11b-423d-98fa-f0b96f29425d-1684827008de6aa03b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>The Legend of White's Boots<\/p>",
+            "heading_size": "h1",
+            "right_text": ""
+          }
+        },
+        "template--19179543789885__dec465b5-a11b-423d-98fa-f0b96f29425d-1684827008de6aa03b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As the legend goes, Edward White established a one man shoe shop in Connecticut before the Civil War. He was the first of three generations of bootmakers to span from 1853 to 1972—a remarkable feat for a family business in America. Edward never dreamed the ‘White boot’ would soon be a source of pride to lineman and log drivers and smokejumpers in the Pacific Northwest. His only dream was to make a good boot and get paid for it.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19179543789885__dec465b5-a11b-423d-98fa-f0b96f29425d-1684827008de6aa03b-0",
+        "template--19179543789885__dec465b5-a11b-423d-98fa-f0b96f29425d-1684827008de6aa03b-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "full_width": false,
+        "small_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "c2ff542b-e41f-4f68-8ba1-7879cfa6463f": {
+      "type": "image-banner",
+      "settings": {
+        "section_width": true,
+        "image": "shopify:\/\/shop_images\/legend-of-whites-large-image.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "ad98b32f-13f4-4efb-a578-d5b7fbf86d77": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19179543789885__ad98b32f-13f4-4efb-a578-d5b7fbf86d77-1684827008de6aa03b-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<p>Shenandoah Valley<\/p>",
+            "heading_size": "h1",
+            "right_text": "The Early Years (1850s-1900s)"
+          }
+        },
+        "template--19179543789885__ad98b32f-13f4-4efb-a578-d5b7fbf86d77-1684827008de6aa03b-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The early years of White’s Boots are marked by few surviving stories. More than anything, the boots are what we know best, and the stories they inspired in the Pacific Northwest.<br\/><br\/>Bootmaking was hard living, but it was honest. A bootmaker only made money when he made a boot, still true to this day. Repairing boots kept the lights on, but it would never buy the building, and Edward knew it. He soon taught his son, John, who continued to work in the Northeast. In 1880, John followed opportunity to the Shenandoah Valley. It was the first time loggers and miners experienced early versions of the White’s work boot. The Blue Ridge Mountains served as a field test for the untested mountains out west, and John used every opportuanity to prepare his boots for the top.<br\/><br\/>The next 20 years were the most important for the success of White’s Boots in the early 20th century. John taught his son, Otto, who would soon show his worth as an innovator of the trade. Otto was ambitious. He wanted to own a building, and he would do it by the 1920s. The more boots he made, the more he began to master the ‘Anatomy of a Legend’ many know and love today: the hand-welted work boot. It’s impossible to know how many bootmakers were practicing the same techniques in those days, but it would be Otto who put his name to the staying power of the hand-sewn work boot in America. He would do it his own way.<br\/><br\/>In 1889, the future of the business rested on John’s shoulders. He decided to move the family out west, bootjacks and all. Otto was not yet 20, but he was already marching toward the Arch-Ease innovation he would trademark in Spokane, WA. All he needed was to experience a place where men had the kind of money to buy the kind of boots he made. In 1900, the family got off the train in Wardner, Idaho. John and Otto set up shop, and one by one, the White family name was stamped into the best work boot in the country.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19179543789885__ad98b32f-13f4-4efb-a578-d5b7fbf86d77-1684827008de6aa03b-0",
+        "template--19179543789885__ad98b32f-13f4-4efb-a578-d5b7fbf86d77-1684827008de6aa03b-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "full_width": false,
+        "small_width": false,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "bba8fad5-093e-49c9-ae22-1dd10e4b131d": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"page-width\">\n<div class=\"gallery\">\n<div class=\"item\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0727\/1183\/1869\/files\/illustration-bootmaker.svg?v=1684836470\" alt=\"\">\n    <h4>Pre-Civil War<\/h4>\n    <p>Edward White established a one man shoe shop in Connecticut<\/p>                        \n<\/div>\n<div class=\"item\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0727\/1183\/1869\/files\/illustration-wildland-firefighter.svg?v=1684836465\" alt=\"\">\n    <h4>1880<\/h4>\n    <p>John White, son of Edward, relocated to the Shenandoah Valley (VA)<\/p>                        \n<\/div>\n<div class=\"item\">\n    <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/0727\/1183\/1869\/files\/illustration-whites-shop.svg?v=1684836465\" alt=\"\">\n    <h4>1889-1900<\/h4>\n    <p>John White, with his son Otto, move their family West. Ultimately landing in Wardner, Idaho in 1900.<\/p>                        \n<\/div>\n<\/div>\n<\/div>",
+        "color_scheme": "transparent",
+        "padding_top": 0,
+        "padding_bottom": 52
+      }
+    },
+    "f0cce50c-893e-4f77-9155-e4a1723ec674": {
+      "type": "image-banner",
+      "settings": {
+        "section_width": false,
+        "image": "shopify:\/\/shop_images\/smokejumper-large-image.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "ec142800-605a-49ac-baf9-f549e4870a2a": {
+      "type": "image-banner",
+      "blocks": {
+        "template--19179543789885__ec142800-605a-49ac-baf9-f549e4870a2a-168483733357f45531-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "The White Shoe Company Pacific Northwest",
+            "heading_size": "h1"
+          }
+        },
+        "template--19179543789885__ec142800-605a-49ac-baf9-f549e4870a2a-168483733357f45531-1": {
+          "type": "text",
+          "settings": {
+            "text": "The turn of the 20th century, the Pacific Northwest was booming. Loggers, miners, and mill workers flooded Idaho, Washington, and Oregon. By 1910, Otto grew from a one-man shop to the White Shoe Company. He bought a small building and filled it with boots. As many as he could build, he sold. Even when the building burned to the ground from a formaldehyde candle he left overnight, Otto found a way to rebuild the company bigger and better. While John ran a one-man shop in St. Maries, Otto pushed the company toward its greatest growth opportunity: Spokane, WA.",
+            "text_style": "body"
+          }
+        },
+        "a1b988bc-5307-452c-9279-3ac5474dee20": {
+          "type": "text",
+          "settings": {
+            "text": "Spokane was a railroad town. It was the only way for the East and the Midwest to connect to the Pacific Northwest. It meant the White Shoe Company benefited from infrastructure that was impossible to find in Northern Idaho. Spokane offered equal access east and west as the pride of the Inland Empire. It was the only way for Otto to sell and ship to more dealers in Montana, Idaho, Oregon, and Washington.",
+            "text_style": "body"
+          }
+        },
+        "6252110a-bc75-494d-9de5-ddcd9a85c7d5": {
+          "type": "text",
+          "settings": {
+            "text": "A two decade period in the 1920s and 1930s would establish Otto as the author of the legend we know today. He designed more boots, signed more dealers, employed more bootmakers, and bought more machines. His focus was innovation. After years on the bootjack, Otto was obsessed with comfort that only came with a custom fit. He spent more than 20 years studying the anatomy of the foot and found his way to a ‘scientifically built’ boot. In 1926, Arch-Ease was trademarked. It was all Otto needed for the company’s prolific growth during the Great Depression.",
+            "text_style": "body"
+          }
+        },
+        "90cde41e-a853-47c8-a065-f493e396b50f": {
+          "type": "text",
+          "settings": {
+            "text": "The Lineman, Sportsman, Summer Logger, Packer, Oxford, Semi-Dress, and modern Cruiser were all developed within a ten year period in the late 1920s and 1930s. With Arch-Ease comfort, Otto knew that everyone—from a store clerk to a mule packer—was in need of a custom fit. He had already mastered the logging boot with two different patents in 1916 and 1927 so went after every other kind of work boot. As a result, dealers and direct customers only grew during the pre-war and post-war years. The best ideas outlive their originators and Arch-Ease was just that for Otto. The boots he built in the Great Depression are the boots we still wear today.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "template--19179543789885__ec142800-605a-49ac-baf9-f549e4870a2a-168483733357f45531-0",
+        "template--19179543789885__ec142800-605a-49ac-baf9-f549e4870a2a-168483733357f45531-1",
+        "a1b988bc-5307-452c-9279-3ac5474dee20",
+        "6252110a-bc75-494d-9de5-ddcd9a85c7d5",
+        "90cde41e-a853-47c8-a065-f493e396b50f"
+      ],
+      "custom_css": [
+        "h2 {color: black;}",
+        ".banner__box {color: black; max-width: 100%;}",
+        ".banner__content {padding-top: 20%; padding-left: 0; padding-right: 0;}"
+      ],
+      "settings": {
+        "section_width": true,
+        "image": "shopify:\/\/shop_images\/illustration-mountain-landscape.svg",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "desktop_content_position": "bottom-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "accent-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "93e964f2-758f-4321-97b1-f8f0cf7853b6": {
+      "type": "multicolumn",
+      "blocks": {
+        "template--19179543789885__93e964f2-758f-4321-97b1-f8f0cf7853b6-1684839088454bc2bb-1": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/logger-half-image.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "template--19179543789885__93e964f2-758f-4321-97b1-f8f0cf7853b6-1684839088454bc2bb-0": {
+          "type": "column",
+          "settings": {
+            "just_image": true,
+            "image": "shopify:\/\/shop_images\/arch-ease-last-half-image.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19179543789885__93e964f2-758f-4321-97b1-f8f0cf7853b6-1684839088454bc2bb-1",
+        "template--19179543789885__93e964f2-758f-4321-97b1-f8f0cf7853b6-1684839088454bc2bb-0"
+      ],
+      "custom_css": [
+        ".multicolumn-list {--grid-desktop-horizontal-spacing: 30px; --grid-desktop-vertical-spacing: 30px;}"
+      ],
+      "settings": {
+        "title": "",
+        "text": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "content_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "a70dbcfc-1e69-4cb8-b8e9-b046c115ff8f": {
+      "type": "image-banner",
+      "blocks": {
+        "template--19179543789885__a70dbcfc-1e69-4cb8-b8e9-b046c115ff8f-16848391975851800f-0": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "Image banner",
+            "heading_size": "h1"
+          }
+        },
+        "template--19179543789885__a70dbcfc-1e69-4cb8-b8e9-b046c115ff8f-16848391975851800f-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "Give customers details about the banner image(s) or content on the template.",
+            "text_style": "body"
+          }
+        },
+        "template--19179543789885__a70dbcfc-1e69-4cb8-b8e9-b046c115ff8f-16848391975851800f-2": {
+          "type": "buttons",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "Button label",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "Button label",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--19179543789885__a70dbcfc-1e69-4cb8-b8e9-b046c115ff8f-16848391975851800f-0",
+        "template--19179543789885__a70dbcfc-1e69-4cb8-b8e9-b046c115ff8f-16848391975851800f-1",
+        "template--19179543789885__a70dbcfc-1e69-4cb8-b8e9-b046c115ff8f-16848391975851800f-2"
+      ],
+      "settings": {
+        "section_width": true,
+        "image": "shopify:\/\/shop_images\/logger-large-image.jpg",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "a6279834-57c5-4283-a65f-63cf752d12eb": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19179543789885__a6279834-57c5-4283-a65f-63cf752d12eb-16848392349f93f206-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "America, East and West",
+            "heading_size": "h1"
+          }
+        },
+        "template--19179543789885__a6279834-57c5-4283-a65f-63cf752d12eb-16848392349f93f206-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Despite the legacy of the Lineman and Logger and Packer, the longevity of White’s Boots in the 21st century comes down to one boot: the Smokejumper. In 1939, the first version of Smokejumper was worn by Francis Lufkin, an employee of the U.S. Forest Service. As a field tester and foreman for the Smokejumping program, he would become a legend in his own right. He heard about Otto White from his grandfather, who had been a log driver in St. Maries during the logging boom. In the midst of the Great Depression, Francis bought his first pair of White’s Boots for $12.00. The rest is history. No company has benefited more from word-of-mouth than White’s Boots, and the Smokejumper is the chief benefactor of it. One-by-one, smokejumpers started buying the historic 335 model.<\/p><p>In 1951, dealer catalogs touted the 335 as the official boot worn by smokejumpers in Region 1. The U.S. Forest Service never issued the boot as a part of their official gear, but smokejumpers bought it anyway for a week’s worth of pay. The historic Smokejumper was worn for more than 25 years. Hundreds of smokejumpers had worn it and hung it on their mantel as a trophy, but in 1963, Vibram introduced their revolutionary sole into North America and Otto’s bootmakers were there to use it.<\/p><p>Over the next several decades, the 1963 model of the Smokejumper put White’s Boots on more than a map of the Pacific Northwest. It spread to all of North America and beyond. The Smokejumper was key to the success of the company after Otto died in 1972. By no means the only boot sold, but always the best selling, the Smokejumper is known as more than a boot for smokejumpers. They deserve the credit for wearing it and naming it, but the longevity of the Smokejumper is rooted in the 375 and 400 models Otto developed on the 4811 last in 1930. For 91 years and counting, everyone from a logger to a lineman to a farmer to a forest ranger has worn some version of it. Hand-lasted, hand-welted, and hand-bottomed, it’s a legend no matter who wears it.<\/p>",
+            "text_style": "body",
+            "bg_style": "transparent"
+          }
+        }
+      },
+      "block_order": [
+        "template--19179543789885__a6279834-57c5-4283-a65f-63cf752d12eb-16848392349f93f206-0",
+        "template--19179543789885__a6279834-57c5-4283-a65f-63cf752d12eb-16848392349f93f206-1"
+      ],
+      "custom_css": [
+        ".content-container {padding-left: 0;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/smokejumper-half-image.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "transparent",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "e3e55253-ad6b-4cd4-8ae5-d78e72899fb1": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19179543789885__e3e55253-ad6b-4cd4-8ae5-d78e72899fb1-16848400789bead9fc-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "The White's Family of Bootmakers",
+            "heading_size": "h1"
+          }
+        },
+        "template--19179543789885__e3e55253-ad6b-4cd4-8ae5-d78e72899fb1-16848400789bead9fc-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>1972 marked the last year Otto White walked the floors of White’s Shoe Shop, but his indomitable spirit continues through the generation of bootmakers he left behind. The lifeblood of White’s Boots has always been the bootmaker. In all but a few of our 168 year history, the company has been run by a bootmaker.<\/p><p>Eric Kinney, President of White’s Boots, spent 26 years behind a bootjack. When he took over as the shop foreman, he was honored as one of the best bootmakers in the history of the company. His commitment to the integrity of our boots and his respect for the men and women who wear them help us continue the tradition of White’s Boots to future generations.<\/p>",
+            "text_style": "body",
+            "bg_style": "transparent"
+          }
+        }
+      },
+      "block_order": [
+        "template--19179543789885__e3e55253-ad6b-4cd4-8ae5-d78e72899fb1-16848400789bead9fc-0",
+        "template--19179543789885__e3e55253-ad6b-4cd4-8ae5-d78e72899fb1-16848400789bead9fc-1"
+      ],
+      "custom_css": [
+        ".image-with-text {max-width: 100%;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/whites-family-of-bootmakers.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    },
+    "4ff7037e-2e08-40a6-8b6f-1765fe161301": {
+      "type": "image-with-text",
+      "blocks": {
+        "template--19179543789885__4ff7037e-2e08-40a6-8b6f-1765fe161301-16848400789bead9fc-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Anatomy of a Legend",
+            "heading_size": "h1"
+          }
+        },
+        "template--19179543789885__4ff7037e-2e08-40a6-8b6f-1765fe161301-16848400789bead9fc-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The legacy of White’s Boots begins and ends with the hand-sewn construction the White’s family of bootmakers has been using for more than 150 years. The value of an Old World work boot—the custom fit, the comfort, and the durability—comes down to how many steps of the process are administered by hand. An authentic White’s boot is not just sewn by hand, it passess through skilled hands at every stage of the construction process.<\/p><p>Go here to learn more about the Anatomy of a Legend and other types of construction we use in our Spokane, WA factory.<\/p>",
+            "text_style": "body",
+            "bg_style": "transparent"
+          }
+        },
+        "template--19179543789885__4ff7037e-2e08-40a6-8b6f-1765fe161301-16848400789bead9fc-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "LEARN MORE",
+            "button_link": "\/"
+          }
+        }
+      },
+      "block_order": [
+        "template--19179543789885__4ff7037e-2e08-40a6-8b6f-1765fe161301-16848400789bead9fc-0",
+        "template--19179543789885__4ff7037e-2e08-40a6-8b6f-1765fe161301-16848400789bead9fc-1",
+        "template--19179543789885__4ff7037e-2e08-40a6-8b6f-1765fe161301-16848400789bead9fc-2"
+      ],
+      "custom_css": [
+        ".image-with-text {max-width: 100%;}"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/anatomy-of-a-legend.jpg",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "color_scheme": "background-2",
+        "mobile_content_alignment": "left",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "78be3652-7446-42c1-8cf0-35614d9bbe1a",
+    "e33054d2-8a82-4efb-8fa5-6fb345ec6712",
+    "dec465b5-a11b-423d-98fa-f0b96f29425d",
+    "c2ff542b-e41f-4f68-8ba1-7879cfa6463f",
+    "ad98b32f-13f4-4efb-a578-d5b7fbf86d77",
+    "bba8fad5-093e-49c9-ae22-1dd10e4b131d",
+    "f0cce50c-893e-4f77-9155-e4a1723ec674",
+    "ec142800-605a-49ac-baf9-f549e4870a2a",
+    "93e964f2-758f-4321-97b1-f8f0cf7853b6",
+    "a70dbcfc-1e69-4cb8-b8e9-b046c115ff8f",
+    "a6279834-57c5-4283-a65f-63cf752d12eb",
+    "e3e55253-ad6b-4cd4-8ae5-d78e72899fb1",
+    "4ff7037e-2e08-40a6-8b6f-1765fe161301"
+  ]
+}

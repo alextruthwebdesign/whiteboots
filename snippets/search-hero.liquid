@@ -1,0 +1,70 @@
+<div class="search-hero" style="background-image:linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)), url({{ 'customer-support-bg.jpg' | asset_url }})">
+    <div class="breadcrumbs-container">
+        <span><a href="/pages/customer-support">Customer Support</a></span> 
+        {% if page.handle != 'customer-support' %}
+        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m10.211 7.155c-.141-.108-.3-.157-.456-.157-.389 0-.755.306-.755.749v8.501c0 .445.367.75.755.75.157 0 .316-.05.457-.159 1.554-1.203 4.199-3.252 5.498-4.258.184-.142.29-.36.29-.592 0-.23-.107-.449-.291-.591-1.299-1.002-3.945-3.044-5.498-4.243z"></path></svg>
+        <span>{{ page.title }}</span>
+        {% endif %}
+        {% if template contains 'search' %}
+        <span>Search</span>
+        {% endif %}
+    </div>
+    <h1>Customer Support</h1>
+
+    <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
+        <main-search>
+            <form action="{{ routes.search_url }}" method="get" role="search" class="search">
+            <div class="field">
+                <input
+                class="search__input field__input"
+                id="Search-In-Template"
+                type="search"
+                name="q"
+                value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.search' | t }}"
+                {%- if settings.predictive_search_enabled -%}
+                    role="combobox"
+                    aria-expanded="false"
+                    aria-owns="predictive-search-results"
+                    aria-controls="predictive-search-results"
+                    aria-haspopup="listbox"
+                    aria-autocomplete="list"
+                    autocorrect="off"
+                    autocomplete="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                {%- endif -%}
+                >
+                <label class="field__label" for="Search-In-Template">{{ 'general.search.search' | t }}</label>
+                <input name="options[prefix]" type="hidden" value="last">
+
+                {%- if settings.predictive_search_enabled -%}
+                <div class="predictive-search predictive-search--search-template" tabindex="-1" data-predictive-search>
+                    <div class="predictive-search__loading-state">
+                    <svg aria-hidden="true" focusable="false" class="spinner" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                    </svg>
+                    </div>
+                </div>
+
+                <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
+                {%- endif -%}
+
+                <button type="reset" class="reset__button field__button{% if search.terms == blank %} hidden{% endif %}" aria-label="{{ 'general.search.reset' | t }}">
+                <svg class="icon icon-close" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-reset">
+                </svg>
+                </button>
+                <button type="submit" class="search__button field__button" aria-label="{{ 'general.search.search' | t }}">
+                <svg class="icon icon-search" aria-hidden="true" focusable="false">
+                    <use xlink:href="#icon-search">
+                </svg>
+                </button>
+            </div>
+            </form>
+        </main-search>
+    </predictive-search>
+    {% comment %} <form id="customer-care-search" action="search-results" method="GET">
+        <input type="text" class="search-text" name="search_str" placeholder="Search" autocomplete="off">
+    </form> {% endcomment %}
+</div>

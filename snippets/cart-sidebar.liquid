@@ -1,0 +1,63 @@
+<div class="cart-totals col-25 clearfix" id="cart-sidebar">
+    <div class="cart-totals-box">
+        <div class="col-wrap clearfix">
+            <div class="gap-left clearfix">
+                <ul class="js-contents">
+                    <li class="cart-amount cart-amount-items">
+                      <span class="cart-subtotal-title">Items</span>
+                      <span class="cart-subtotal-price pull-right">{{ cart.item_count }}</span>
+                    </li>
+                    <li class="cart-amount cart-amount-subtotal">
+                      <span class="cart-subtotal-title">Subtotal Amount</span>
+                      <span class="cart-subtotal-price pull-right">${{ cart.total_price | money_without_currency }}</span>
+                    </li>
+                    <li class="cart-subtotal-shipping-estimator">
+                      <span>Shipping rates vary.</span> <a href="/pages/shipping_quote">Get Estimate</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="text-center">
+                {% comment %} <a href="javascript:void(0)" class="kaffeesatz-regular primary-button">Checkout</a> {% endcomment %}
+                <button
+                    type="submit"
+                    id="checkout"
+                    class="kaffeesatz-regular primary-button"
+                    name="checkout"
+                    {% if cart == empty %}
+                      disabled
+                    {% endif %}
+                    {% comment %} form="cart" {% endcomment %}
+                  >
+                    {{ 'sections.cart.checkout' | t }} <span class="button-arrow">&nbsp;</span>
+                  </button>
+
+                {% comment %} <div class="paypal-cart-btn"> {% endcomment %}
+                    {% comment %} <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_express-checkout&amp;token=EC-1J020196G1075563G"><img src="/content/skins/RDS/images/paypal-logo.svg" "="" alt="Pay With PayPal" title="Pay with PayPal"></a> {% endcomment %}
+                {% comment %} </div> {% endcomment %}
+            </div>
+            {% comment %} <center><p class="affirm-as-low-as" data-page-type="cart" data-amount="39000">Starting at <span class="affirm-ala-price">$36</span>/mo with <span class="__affirm-logo __affirm-logo-blue __ligature__affirm_full_logo__ __processed">Affirm</span>. <a class="affirm-modal-trigger" aria-label="Prequalify now about Affirm Financing (opens in modal)" href="javascript:void(0)">Prequalify now</a></p></center> {% endcomment %}
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function isIE() {
+        const ua = window.navigator.userAgent;
+        const msie = ua.indexOf('MSIE ');
+        const trident = ua.indexOf('Trident/');
+  
+        return msie > 0 || trident > 0;
+      }
+  
+      if (!isIE()) return;
+      const cartSubmitInput = document.createElement('input');
+      console.log('cartSubmitInput', cartSubmitInput)
+      cartSubmitInput.setAttribute('name', 'checkout');
+      cartSubmitInput.setAttribute('type', 'hidden');
+      document.querySelector('#cart').appendChild(cartSubmitInput);
+      document.querySelector('#checkout').addEventListener('click', function (event) {
+        document.querySelector('#cart').submit();
+      });
+    });
+  </script>

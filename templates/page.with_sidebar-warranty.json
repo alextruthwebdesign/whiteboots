@@ -1,0 +1,87 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "ed1e1213-06ac-4619-87d1-eeecafa0400b": {
+      "type": "rich-text",
+      "blocks": {
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Warranty<\/h2>",
+            "heading_size": "h1"
+          }
+        },
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All White’s hand-sewn stitchdown, stitchdown, and Goodyear welted boots are unquestionably warranted to be free of defects in material and workmanship one year from date of purchase.<\/p><p><br\/>Our warranty is an expression of our confidence in our materials and workmanship to assure unsurpassed quality and rugged, dependable service. In the rare event of a defect under this warranty, we will, at our option, repair or replace the product.<br\/><br\/>Please email or call our customer service department at <a href=\"tel:8005413786\">(800) 541-3786<\/a> and a company representative will assist you with any warranty questions.<\/p>"
+          }
+        },
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-0",
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-1",
+        "template--18946785116477__ed1e1213-06ac-4619-87d1-eeecafa0400b-1683887183ef838e0c-2"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 40
+      }
+    },
+    "13905481-5a70-4484-bf17-d93edee041b7": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-0": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "WHAT IS THE WHITE’S BOOTS LIMITED WARRANTY?",
+            "row_content": "<p>We stand by our boots. White’s Boots Inc. builds quality boots and we stand behind every pair of footwear we make. White’s Boots offers a 365 day warranty to the original end user customer that their footwear is free from defect in materials and workmanship. With respect to our DRI-FOOT products, footwear is free from leakage in normal use.<\/p><p><em>EXCLUSIONS<\/em>. Warranty does not cover, and White’s shall have no obligation or liability with respect to, any damage or problems resulting from:<\/p><ul><li>Normal wear and tear. Cuts, abrasions or damage resulting from anything other than normal and ordinary use of the product.<\/li><li>Damage caused by chemical or other foreign body contamination and alterations, modifications or repair work performed by anyone other than White’s. Failure to adequately maintain product, including proper cleaning and leather conditioning.<\/li><li>Use of any safety-toe (NMT, Alloy or Steel) or metatarsal-guard boot after boot has sustained an initial impact in excess of specified ASTM rating. Safety toe or metatarsal guard may be shattered or otherwise damaged as a result of such impact. Boots should not there after be used in any environment that requires a safety toe or metatarsal-guard.<\/li><li>Improper or inadequate fit (once footwear product has been worn\/used).<\/li><\/ul>"
+          }
+        },
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "HOW CAN I START MY WHITE’S BOOTS LIMITED WARRANTY CLAIM?",
+            "row_content": "<p>To start your warranty claim, please contact our Customer Service team by email at service@whitesboots.com or call 1-800-541-3786.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-0",
+        "template--19036823912765__13905481-5a70-4484-bf17-d93edee041b7-1683890725feaf1d9f-1"
+      ],
+      "settings": {
+        "caption": "",
+        "heading": "Frequently Asked Questions",
+        "open_first_collapsible_row": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "ed1e1213-06ac-4619-87d1-eeecafa0400b",
+    "13905481-5a70-4484-bf17-d93edee041b7"
+  ]
+}
