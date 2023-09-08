@@ -1,0 +1,54 @@
+.text-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.text-section .text-section-content h1 {
+  font-family: "VinchensoBoldBold";
+  margin-bottom: 4rem;
+}
+.text-section .text-section-content h6 {
+  font-size: 24px;
+}
+
+.text-section .text-section-content h6 {
+  font-size: 24px;
+  margin-bottom: 1em;
+}
+
+.text-section .text-section-content p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+.text-section .text-section-content:not(:last-child) {
+  margin-bottom: 3.75rem;
+}
+.text-section .text-section-content ol,
+.text-section .text-section-content ul {
+  padding-left: 1.1em;
+}
+
+.text-section .text-section-content ol li,
+.text-section .text-section-content ul li {
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .text-section .text-section-content h1 {
+    font-family: "VinchensoBoldBold";
+    margin-bottom: 1em;
+  }
+}
+@media (max-width: 992px) {
+  .text-section .text-section-content:not(:last-child) {
+    margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 640px) {
+  .text-section .text-section-content h6 {
+    font-size: 18px;
+  }
+}
