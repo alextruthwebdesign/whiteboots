@@ -8,13 +8,23 @@
   font-family: "VinchensoBoldBold";
   margin-bottom: 4rem;
 }
-.text-section .text-section-content h6 {
+.text-section .text-section-content h2 {
   font-size: 24px;
 }
 
-.text-section .text-section-content h6 {
+.text-section .text-section-content h2 {
   font-size: 24px;
   margin-bottom: 1em;
+}
+.text-section .text-section-content h3 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+.text-section .text-section-content h4,
+.text-section .text-section-content h5,
+.text-section .text-section-content h6 {
+  margin-bottom: 1rem;
+  font-size: 16px;
 }
 
 .text-section .text-section-content p:not(:last-child) {
@@ -48,7 +58,7 @@
 }
 
 @media (max-width: 640px) {
-  .text-section .text-section-content h6 {
+  .text-section .text-section-content h2 {
     font-size: 18px;
   }
 }

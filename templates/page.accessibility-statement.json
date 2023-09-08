@@ -1,0 +1,48 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "0cec27dc-d607-4b9d-8e0c-14a63af294a1": {
+      "type": "text-section",
+      "blocks": {
+        "f356986b-fbd3-4e64-a790-7ca40ffe7361": {
+          "type": "content",
+          "settings": {
+            "content": "<h1>Online Accessibility Statement<\/h1>"
+          }
+        },
+        "326a3f5c-5a48-4f69-afdc-735a82cb7ae1": {
+          "type": "content",
+          "settings": {
+            "content": "<h2>White’s Boots Online Accessibility Statement<\/h2><p>White’s Boots goal is to permit customers to successfully gather information and conduct business through our website, including individuals with visual impairments that use screen readers to view the website. White’s Boots has taken steps and is devoting resources to promote website accessibility.<\/p><p>If you have difficulty accessing features or functions on this website please call our customer service line at 800-541-3786<\/p>"
+          }
+        },
+        "4377cef7-5a98-4ff1-a586-daa97576ba72": {
+          "type": "content",
+          "settings": {
+            "content": "<h2>White’s Boots Policy on Website Accessibility<\/h2><h3>Introduction:<\/h3><p>White’s Boots Inc. is committed to providing equality of opportunity to persons with disabilities, including equal access to its website.<\/p><p>This policy is a living document that will change over time as IT changes. Ample opportunities for education and communication will occur whenever changes to the policy take place.<\/p><h3>Policy Statement:<\/h3><p>White’s Boots Inc. is committed to ensuring equal access to its website.<\/p><p>Use web page designs that are consistent with the W3C’s Web Content Accessibility Guidelines 2.0 (WCAG) Level AA. The goal for White’s Boots Inc is to be reasonably compliant with WCAG 2.1 Level AA.<\/p><p>Disseminate electronic documents and multimedia on web pages that are consistent with this policy.<\/p><h3>Applicability:<\/h3><p>Official web pages and associated web-based applications.<\/p><h3>Web Page Requirements:<\/h3><p>All new and revised web pages, website templates, and website themes published on or after the effective date of this policy will reasonably comply with WCAG 2.1 Level AA.<\/p><p>On a periodic basis, White’s Boots Inc. will review its website for compliance with this policy.<\/p><h3>Complaints:<\/h3><p>Please be aware that our efforts are ongoing. Complaints regarding accessibility of www.whitesboots.com pages should be directed to 1-800-541-3786<\/p><h3>Effective Date:<\/h3><p>This policy will take effect as of the date of adoption.<\/p><h3>Date of Adoption and Last Date Updated:<\/h3>"
+          }
+        }
+      },
+      "block_order": [
+        "f356986b-fbd3-4e64-a790-7ca40ffe7361",
+        "326a3f5c-5a48-4f69-afdc-735a82cb7ae1",
+        "4377cef7-5a98-4ff1-a586-daa97576ba72"
+      ],
+      "settings": {
+        "padding_top": 100,
+        "padding_bottom": 84
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0cec27dc-d607-4b9d-8e0c-14a63af294a1"
+  ]
+}
