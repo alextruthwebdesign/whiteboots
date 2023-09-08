@@ -17510,3 +17510,11 @@ main#last-guide .inner {
   max-width: unset;
   width: 100%;
 }
+
+.gift-certificate-wrapper .page-gift-certificate .field::after {
+  display: none;
+}
+
+.gift-certificate-wrapper .page-gift-certificate .buttons a.kaffeesatz-regular {
+  color: white !important;
+}

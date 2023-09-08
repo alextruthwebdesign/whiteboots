@@ -1,0 +1,56 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "0bddfa28-c6d5-4c98-bbec-a7a162cb994d": {
+      "type": "rich-text",
+      "blocks": {
+        "template--20999217021226__0bddfa28-c6d5-4c98-bbec-a7a162cb994d-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Gift Certificate<\/h2>",
+            "heading_size": "h1",
+            "right_text": ""
+          }
+        },
+        "template--20999217021226__0bddfa28-c6d5-4c98-bbec-a7a162cb994d-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gift Certificates make outstanding gifts for friends, family or loved ones and can be redeemed for any product in our store. To purchase, please complete the information below.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "template--20999217021226__0bddfa28-c6d5-4c98-bbec-a7a162cb994d-heading-1",
+        "template--20999217021226__0bddfa28-c6d5-4c98-bbec-a7a162cb994d-text-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "full_width": true,
+        "small_width": false,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "8788b48b-f7cc-4ace-89bb-eca754e92c7f": {
+      "type": "gift-certificate-form",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/gift-certificates-image.jpg",
+        "padding_top": 36,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "0bddfa28-c6d5-4c98-bbec-a7a162cb994d",
+    "8788b48b-f7cc-4ace-89bb-eca754e92c7f"
+  ]
+}

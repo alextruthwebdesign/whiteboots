@@ -1,0 +1,123 @@
+  {%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+
+  <div class='gift-certificate-wrapper section-{{ section.id }}-padding'>
+  
+    <div class="page-gift-certificate">
+        <div class="form-wrapper col2-form-wrapper">
+            <div class="_form_12">
+                <div class="spacer">
+                    <div class="msg-notice">
+                      
+                    </div>
+                    <form name="gift_certificate" method="post" action="https://shop.whitesboots.com/index.php?p=gift_certificate" onsubmit="return CheckGiftCertForm()">
+                        <input type="hidden" name="oa" value="AddGiftCert" />
+                        <div class="fieldset">
+                            <h3 class="gift-title">Gift Certificate purchase form</h3>
+
+                            <div class="field required">
+                                <label for="first_name">Recipient First Name*</label>
+                                <input type="text" name="first_name" id="first_name" value="" class="formControlText" />
+                            </div>
+                            <div class="field required">
+                                <label for="last_name">Recipient Last Name*</label>
+                                <input type="text" name="last_name" id="last_name" value="" class="formControlText" />
+                            </div>
+                            <div class="field required">
+                                <label for="rep_email">Recipient Email Address*</label>
+                                <input type="text" name="rep_email" id="rep_email" value="" class="formControlText" />
+                            </div>
+                            <div class="field required">
+                                <label for="from_name">Your Name*</label>
+                                <input type="text" name="from_name" id="from_name" value="" class="formControlText" />
+                            </div>
+                            <div class="field required">
+                                <label for="gift_amount">
+                                    Certificate Amount*
+                                </label>
+                                <input name="gift_amount" id="gift_amount" class="gift-amount" type="text" value="0.00" placeholder="$" />
+                            </div>
+                            <div class="field required clearfix">
+                                <label for="message">Certificate Message*</label>
+                                <textarea id="message" name="message" cols="25" rows="6"></textarea>
+                            </div>
+                            <div class="buttons">
+                                <a href="javascript:void(0)" onclick=" $(this).parents('form:first').submit();" class="kaffeesatz-regular primary-button">Add to Cart<span class="button-arrow">&nbsp;</span></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="image-block">
+             {%- if section.settings.image != 'blank' -%}
+                {{ section.settings.image | image_url: width: 3840 | image_tag:
+                  loading: 'lazy',
+                  height: height,
+                  sizes: "100vw",
+                  widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840'
+                }}
+             {% endif %}
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+  {% schema %}
+  {
+    "name": "Gift Certificate Form",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+       {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image After"
+        },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 36
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 36
+      }
+    ],
+    
+    "presets": [
+      {
+        "name": "Gift Certificate Form"
+      }
+    ]
+  }
+  {% endschema %}
+  
