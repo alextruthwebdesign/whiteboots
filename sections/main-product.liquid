@@ -1177,6 +1177,33 @@ $(document).ready(function() {
   endif
 -%}
 
+<script>
+  const container = document?.querySelector('.product-construction-container')
+  if(container){
+    const items = container?.querySelectorAll('.product-construction-block')
+
+    if(items?.length > 0){
+      items?.forEach((item =>{
+        item.addEventListener('click',function(e){
+         
+          if(e?.currentTarget?.classList?.contains('active')){
+             item.classList.remove('active');
+          }else{
+              item.classList.add('active');
+          }
+          items?.forEach(i =>{
+          if(i !== e?.currentTarget){
+             i.classList.remove('active');
+          }
+         })
+          
+         
+        });
+      }))
+    }
+  }
+</script>
+
 <script type="application/ld+json">
   {
     "@context": "http://schema.org/",
