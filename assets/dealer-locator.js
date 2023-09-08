@@ -1,291 +1,561 @@
 class DealerLocator extends HTMLElement {
-    constructor() {
-			super();
+  constructor() {
+    super();
 
-			this.url = this.dataset.url
-			this.pin = this.dataset.pin
-			this.mapContainer = this.querySelector('#wpsl-gmap');
-			this.map = {}
-			this.markersArray = [];
-			this.openInfoWindow = [];
-			this.storeList = this.querySelector('#wpsl-stores ul')
-			this.searchInput = this.querySelector('#wpsl-search-input')
-			this.storeData = '';
-			this.geocoder = null
-			this.searchInput.addEventListener('keypress', this.keyboardAutoCompleteSubmit.bind(this));
-			this.visibleMarkers = []
-			this.radiusMile = 50;
+    this.url = this.dataset.url;
+    this.pin = this.dataset.pin;
+    this.mapContainer = this.querySelector("#wpsl-gmap");
+    this.map = {};
+    this.markersArray = [];
+    this.openInfoWindow = [];
+    this.storeList = this.querySelector("#wpsl-stores ul");
+    this.searchInput = this.querySelector("#wpsl-search-input");
+    this.storeData = "";
+    this.geocoder = null;
+    this.searchInput.addEventListener(
+      "keypress",
+      this.keyboardAutoCompleteSubmit.bind(this)
+    );
+    this.visibleMarkers = [];
+    this.radiusMile = 50;
 
-			this.activateAutocomplete();
-			
-			const call = (async () => {
-				let data = await this.fetchData(this.url);
-				this.initMap(data);
-			})();
+    this.activateAutocomplete();
+
+    const call = (async () => {
+      let data = await this.fetchData(this.url);
+      this.initMap(data);
+    })();
+  }
+
+  keyboardAutoCompleteSubmit(e) {
+    if (e.which == 13) {
+      this.resetSearchResults();
+      this.codeAddress(this.infoWindow);
+
+      return false;
+    }
+  }
+
+  resetSearchResults() {
+    this.storeList.innerHTML = "";
+  }
+
+  activateAutocomplete() {
+    var autocomplete,
+      place,
+      autoCompleteLatLng,
+      options = {};
+
+    let searchInput = this.searchInput;
+    let _this = this;
+
+    options = {
+      fields: ["geometry.location"],
+      types: ["(regions)"],
+    };
+
+    autocomplete = new google.maps.places.Autocomplete(searchInput, options);
+
+    autocomplete.addListener("place_changed", function () {
+      place = autocomplete.getPlace();
+
+      if (place.geometry) {
+        autoCompleteLatLng = place.geometry.location;
+        _this.prepareStoreSearch(autoCompleteLatLng);
+      }
+    });
+  }
+
+  async fetchData(url) {
+    const response = await fetch(url);
+    const jsonData = await response.text();
+    const jsonString = jsonData?.match(/(?<="table":).*(?=}\);)/g)?.[0];
+    const json = JSON?.parse(jsonString);
+    let newArr = [];
+
+    json?.rows?.forEach((row) => {
+      newArr = [
+        ...newArr,
+        row?.c?.map((item, index) => {
+          return { ...item, column: json?.cols?.[index] };
+        }),
+      ];
+    });
+
+    return newArr;
+  }
+
+  initMap(markers = []) {
+    let center = new google.maps.LatLng(45.521, -122.677);
+    const mapOptions = {
+      zoom: 10,
+      center: center,
+      mapTypeId: google.maps.MapTypeId["terrain"],
+      mapTypeControl: true,
+      streetViewControl: true,
+      styles: [
+        { elementType: "geometry", stylers: [{ color: "#cbd3b9" }] },
+        { elementType: "labels.text.fill", stylers: [{ color: "#523735" }] },
+        { elementType: "labels.text.stroke", stylers: [{ color: "#f5f1e6" }] },
+        { featureType: "administrative", stylers: [{ visibility: "off" }] },
+        {
+          featureType: "administrative",
+          elementType: "geometry.stroke",
+          stylers: [{ color: "#c9b2a6" }],
+        },
+        {
+          featureType: "administrative.country",
+          stylers: [{ visibility: "on" }],
+        },
+        {
+          featureType: "administrative.land_parcel",
+          elementType: "geometry.stroke",
+          stylers: [{ color: "#c9d2b6" }],
+        },
+        {
+          featureType: "administrative.land_parcel",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#ae9e90" }],
+        },
+        {
+          featureType: "administrative.locality",
+          stylers: [{ visibility: "on" }, { weight: 1.5 }],
+        },
+        {
+          featureType: "administrative.locality",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#000000" }],
+        },
+        {
+          featureType: "administrative.neighborhood",
+          stylers: [{ visibility: "off" }],
+        },
+        {
+          featureType: "administrative.province",
+          stylers: [{ visibility: "on" }],
+        },
+        {
+          featureType: "administrative.province",
+          elementType: "labels.text.stroke",
+          stylers: [{ weight: 1.5 }],
+        },
+        {
+          featureType: "landscape.natural",
+          elementType: "geometry",
+          stylers: [{ color: "#c9d2b7" }],
+        },
+        {
+          featureType: "poi",
+          elementType: "geometry",
+          stylers: [{ color: "#e1e0c3" }],
+        },
+        {
+          featureType: "poi",
+          elementType: "labels",
+          stylers: [{ visibility: "off" }],
+        },
+        {
+          featureType: "poi",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#93817c" }],
+        },
+        {
+          featureType: "poi.park",
+          elementType: "geometry.fill",
+          stylers: [{ color: "#e1e0c1" }],
+        },
+        {
+          featureType: "poi.park",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#447530" }],
+        },
+        {
+          featureType: "road",
+          elementType: "geometry",
+          stylers: [{ color: "#fdfcf8" }],
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "geometry",
+          stylers: [{ color: "#fdfcf8" }],
+        },
+        {
+          featureType: "road.arterial",
+          elementType: "labels",
+          stylers: [{ visibility: "simplified" }],
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry",
+          stylers: [{ color: "#afaa91" }],
+        },
+        {
+          featureType: "road.highway",
+          elementType: "geometry.stroke",
+          stylers: [{ color: "#afaa91" }],
+        },
+        {
+          featureType: "road.highway",
+          elementType: "labels",
+          stylers: [{ visibility: "simplified" }],
+        },
+        {
+          featureType: "road.highway",
+          elementType: "labels.icon",
+          stylers: [{ visibility: "off" }],
+        },
+        {
+          featureType: "road.highway.controlled_access",
+          elementType: "geometry",
+          stylers: [{ color: "#afaa91" }],
+        },
+        {
+          featureType: "road.highway.controlled_access",
+          elementType: "geometry.stroke",
+          stylers: [{ color: "#afaa91" }],
+        },
+        {
+          featureType: "road.highway.controlled_access",
+          elementType: "labels",
+          stylers: [{ visibility: "simplified" }],
+        },
+        {
+          featureType: "road.highway.controlled_access",
+          elementType: "labels.icon",
+          stylers: [{ visibility: "simplified" }],
+        },
+        {
+          featureType: "road.local",
+          elementType: "labels",
+          stylers: [{ visibility: "simplified" }],
+        },
+        {
+          featureType: "road.local",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#806b63" }],
+        },
+        {
+          featureType: "transit.line",
+          elementType: "geometry",
+          stylers: [{ color: "#afaa91" }],
+        },
+        {
+          featureType: "transit.line",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#8f7d77" }],
+        },
+        {
+          featureType: "transit.line",
+          elementType: "labels.text.stroke",
+          stylers: [{ color: "#ebe3cd" }],
+        },
+        {
+          featureType: "transit.station",
+          elementType: "geometry",
+          stylers: [{ color: "#afaa91" }],
+        },
+        {
+          featureType: "water",
+          elementType: "geometry.fill",
+          stylers: [{ color: "#a5c3cb" }],
+        },
+        {
+          featureType: "water",
+          elementType: "labels.text.fill",
+          stylers: [{ color: "#92998d" }],
+        },
+      ],
+      zoomControlOptions: {
+        position: google.maps.ControlPosition.TOP_LEFT,
+      },
+      scrollwheel: true,
+    };
+
+    this.geocoder = new google.maps.Geocoder();
+    this.map = new google.maps.Map(this.mapContainer, mapOptions);
+
+    let bounds = new google.maps.LatLngBounds();
+
+    if (markers.length) {
+      let infoWindow = this.newInfoWindow();
+
+      for (let index = 0; index < markers.length; index++) {
+        const element = markers[index];
+
+        const lat = element?.find((i) => i?.column?.label === "lat");
+        const lng = element?.find((i) => i?.column?.label === "lng");
+
+        const latLng = new google.maps.LatLng(lat?.v, lng?.v);
+
+        this.addMarker(this, latLng, element, infoWindow);
+
+        bounds.extend(latLng);
+      }
+
+      this.showVisibleMarkers();
+    } else {
+      this.storeList.innerHTML =
+        "<li class='wpsl-no-results-msg'>No results found</li>";
     }
 
-		keyboardAutoCompleteSubmit(e) {
-			if ( e.which == 13 ) {
-				this.resetSearchResults();
-				this.codeAddress( this.infoWindow );
-	
-				return false;
-			}
-		}
+    this.prepareListItems(this.markersArray);
 
-		resetSearchResults() {
-			this.storeList.innerHTML = ''
-		}
+    if (markers.length > 1) {
+      // Make all the markers fit on the map.
+      const extendPoint = new google.maps.LatLng(
+        bounds.getNorthEast().lat() + 1,
+        bounds.getNorthEast().lng() + 1
+      );
 
-		activateAutocomplete() {
-			var autocomplete, place, autoCompleteLatLng,
-				options = {};
-		
-			let searchInput = this.searchInput
-			let _this = this
+      bounds.extend(extendPoint);
+      this.map.fitBounds(bounds);
+    }
+  }
 
-			options = {
-				fields: ['geometry.location'],
-				types: ['(regions)']
-			}
-		
-			autocomplete = new google.maps.places.Autocomplete( searchInput, options );
-			
-			autocomplete.addListener( "place_changed", function() {
-				place = autocomplete.getPlace();
+  addMarker(_this, latLng, element, infoWindow) {
+    const status = element?.find((i) => i?.column?.label === "status")?.v;
 
-				if ( place.geometry ) {
-					autoCompleteLatLng = place.geometry.location;
-					_this.prepareStoreSearch( autoCompleteLatLng);
-				}
-			});
-		}
-		
-		async fetchData(url) {
-			const response = await fetch(url);
-  		const jsonData = await response.json();
-  		
-			return jsonData;
-		}
+    if (status != "publish") return;
 
-		initMap(markers = []) {
-			
-			let center = new google.maps.LatLng(45.521, -122.677);
-			const mapOptions = {
-				zoom: 10,
-				center: center,
-				mapTypeId: google.maps.MapTypeId[ 'terrain' ],
-				mapTypeControl: true,
-				streetViewControl: true,
-				styles: [{"elementType":"geometry","stylers":[{"color":"#cbd3b9"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#523735"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#f5f1e6"}]},{"featureType":"administrative","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#c9b2a6"}]},{"featureType":"administrative.country","stylers":[{"visibility":"on"}]},{"featureType":"administrative.land_parcel","elementType":"geometry.stroke","stylers":[{"color":"#c9d2b6"}]},{"featureType":"administrative.land_parcel","elementType":"labels.text.fill","stylers":[{"color":"#ae9e90"}]},{"featureType":"administrative.locality","stylers":[{"visibility":"on"},{"weight":1.5}]},{"featureType":"administrative.locality","elementType":"labels.text.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative.neighborhood","stylers":[{"visibility":"off"}]},{"featureType":"administrative.province","stylers":[{"visibility":"on"}]},{"featureType":"administrative.province","elementType":"labels.text.stroke","stylers":[{"weight":1.5}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#c9d2b7"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#e1e0c3"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels.text.fill","stylers":[{"color":"#93817c"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#e1e0c1"}]},{"featureType":"poi.park","elementType":"labels.text.fill","stylers":[{"color":"#447530"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#fdfcf8"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#fdfcf8"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#afaa91"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#afaa91"}]},{"featureType":"road.highway","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry","stylers":[{"color":"#afaa91"}]},{"featureType":"road.highway.controlled_access","elementType":"geometry.stroke","stylers":[{"color":"#afaa91"}]},{"featureType":"road.highway.controlled_access","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway.controlled_access","elementType":"labels.icon","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"labels","stylers":[{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"labels.text.fill","stylers":[{"color":"#806b63"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"color":"#afaa91"}]},{"featureType":"transit.line","elementType":"labels.text.fill","stylers":[{"color":"#8f7d77"}]},{"featureType":"transit.line","elementType":"labels.text.stroke","stylers":[{"color":"#ebe3cd"}]},{"featureType":"transit.station","elementType":"geometry","stylers":[{"color":"#afaa91"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#a5c3cb"}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"color":"#92998d"}]}],
-				zoomControlOptions: {
-					position: google.maps.ControlPosition.TOP_LEFT
-				},
-				scrollwheel: true,
-			}
+    let mapIcon = {
+      url: this.pin,
+      scaledSize: new google.maps.Size(Number(24), Number(35)), //retina format
+    };
 
-			this.geocoder = new google.maps.Geocoder();
-			this.map 			= new google.maps.Map( this.mapContainer, mapOptions );
+    const name = element?.find((i) => i?.column?.label === "name")?.v;
+    let marker = new google.maps.Marker({
+      position: latLng,
+      map: this.map,
+      optimized: false,
+      title: name,
+      draggable: false,
+      icon: mapIcon,
+      element,
+    });
 
-			let bounds	= new google.maps.LatLngBounds();
-			
-			if(markers.length) {
-				let infoWindow = this.newInfoWindow();
+    this.markersArray.push(marker);
 
-				for (let index = 0; index < markers.length; index++) {
-					const element = markers[index];
-					const latLng = new google.maps.LatLng( element.lat, element.lng );
+    const wpsl_id = element?.find((i) => i?.column?.label === "wpsl_id")?.v;
+    const url = element?.find((i) => i?.column?.label === "url")?.v;
+    const address = element?.find((i) => i?.column?.label === "address")?.v;
+    const city = element?.find((i) => i?.column?.label === "city")?.v;
+    const state = element?.find((i) => i?.column?.label === "state")?.v;
+    const zip = element?.find((i) => i?.column?.label === "zip")?.v;
+    const phone = element?.find((i) => i?.column?.label === "phone")?.v;
 
-					this.addMarker( this, latLng, element, infoWindow);
-					
-					bounds.extend( latLng );
-				}
-
-				this.showVisibleMarkers()
-			} else {
-				this.storeList.innerHTML = "<li class='wpsl-no-results-msg'>No results found</li>";
-			}
-
-			this.prepareListItems(this.markersArray)
-
-			if ( markers.length > 1 ) {
-				// Make all the markers fit on the map.
-				this.map.fitBounds( bounds );
-			}
-		}
-
-		addMarker( _this, latLng, element, infoWindow ) {
-			if(element.status != 'publish') return;
-
-			let mapIcon = {
-				url: this.pin,
-				scaledSize: new google.maps.Size( Number( 24 ), Number( 35 ) ), //retina format
-			};
-
-			
-			let marker = new google.maps.Marker({
-				position: latLng,
-				map: this.map,
-				optimized: false,
-				title: element.name,
-				draggable: false,
-				icon: mapIcon,
-				element
-			});	
-
-			this.markersArray.push(marker);
-
-			const infoWindowContent = `
-				<div data-store-id="${element.wpsl_id}" class="wpsl-info-window">
+    const infoWindowContent = `
+				<div data-store-id="${wpsl_id}" class="wpsl-info-window">
 					<p>
-						<strong><a href="${element.url}" tabindex="0">${element.name}</a></strong>
-						<span>${element.address}</span>
-						<span>${element.city} ${element.state} ${element.zip}</span>
+						<strong><a href="${url}" tabindex="0">${name}</a></strong>
+						<span>${address}</span>
+						<span>${city} ${state} ${zip}</span>
 					</p>
-					<span><strong>Phone</strong>: <a href="tel:${element.phone.replace('(', '').replace(')', '').replace(' ', '').replace('-', '')}">${element.phone}</a></span>
+					<span><strong>Phone</strong>: <a href="tel:${
+            phone
+              ? phone
+                  .replace("(", "")
+                  .replace(")", "")
+                  .replace(" ", "")
+                  .replace("-", "")
+              : ""
+          }">${phone}</a></span>
 					<div class="wpsl-info-actions"><a class="wpsl-directions" href="#">Directions</a></div>
 				</div>
 			`;
 
-			google.maps.event.addListener( marker, "click",( function( currentMap ) {
-				return function() {
-					_this.setInfoWindowContent(_this,  marker, infoWindowContent, infoWindow, currentMap );
-				};
-			}( this.map ) ) );
-		}
-		
-		showVisibleMarkers(latlng) {
-			let distance_lat,distance_lng;
-			const bounds = this.map.getBounds();
-			const newBounds	= new google.maps.LatLngBounds();
-			const markers = this.markersArray;
+    google.maps.event.addListener(
+      marker,
+      "click",
+      (function (currentMap) {
+        return function () {
+          _this.setInfoWindowContent(
+            _this,
+            marker,
+            infoWindowContent,
+            infoWindow,
+            currentMap
+          );
+        };
+      })(this.map)
+    );
+  }
 
-			const map_center = this.map.getCenter();
-	
-			if(latlng) {
-				distance_lat = latlng.lat();
-				distance_lng = latlng.lng();
-			} else {
-				distance_lat = map_center.lat();
-				distance_lng = map_center.lng();
-			}
-	
-			let radius = (this.radiusMile * 1.609344) * 1000;
+  showVisibleMarkers(latlng) {
+    let distance_lat, distance_lng;
+    const bounds = this.map.getBounds();
+    const newBounds = new google.maps.LatLngBounds();
+    const markers = this.markersArray;
 
-			if(latlng) {
-				this.visibleMarkers = [...markers].filter(marker => {
-					marker.setMap(null)
+    const map_center = this.map.getCenter();
 
-					let distance = google.maps.geometry.spherical.computeDistanceBetween(latlng, marker.getPosition())
-					marker.distance = distance;
-					marker.element.distanceToMile = (distance * 0.000621371).toFixed(2);
+    if (latlng) {
+      distance_lat = latlng.lat();
+      distance_lng = latlng.lng();
+    } else {
+      distance_lat = map_center.lat();
+      distance_lng = map_center.lng();
+    }
 
-					if(marker.distance <= radius) {
-						marker.setMap(this.map)
-						newBounds.extend(marker.getPosition());
-					} else {
-						marker.setMap(null)
-					}
-					
-					return marker.distance <= radius;
-				}).sort((a, b) => {
-					return a.distance - b.distance;
-				})
+    let radius = this.radiusMile * 1.609344 * 1000;
 
-				if(this.visibleMarkers.length >= 1) {
-					this.map.fitBounds(newBounds);
-				} else {
-					this.map.setZoom(8)
-				}
-			} else {
-				this.visibleMarkers = markers
+    if (latlng) {
+      this.visibleMarkers = [...markers]
+        .filter((marker) => {
+          marker.setMap(null);
 
-				this.visibleMarkers.map(marker => {
-					newBounds.extend(marker.getPosition());
-					marker.setMap(this.map)
-				})
-				this.map.fitBounds(newBounds);
-			}
+          let distance = google.maps.geometry.spherical.computeDistanceBetween(
+            latlng,
+            marker.getPosition()
+          );
 
-			if(this.visibleMarkers.length == 1) {
-				this.map.setZoom(8)
-			}
-			
-			this.prepareListItems(this.visibleMarkers)
-		}
+          marker.distance = distance;
+          marker.element.distanceToMile = (distance * 0.000621371).toFixed(2);
 
-		setInfoWindowContent(_this, marker, infoWindowContent, infoWindow, currentMap) {
-			infoWindow.setContent( infoWindowContent );
-			infoWindow.open( currentMap, marker );
-			
-			_this.openInfoWindow.push( infoWindow );
-		}
+          if (marker.distance <= radius) {
+            marker.setMap(this.map);
+            newBounds.extend(marker.getPosition());
+          } else {
+            marker.setMap(null);
+          }
 
-		newInfoWindow() {
-			let infoWindow = new google.maps.InfoWindow();
+          return marker.distance <= radius;
+        })
+        .sort((a, b) => {
+          return a.distance - b.distance;
+        });
 
-			return infoWindow;
-		}
+      if (this.visibleMarkers.length >= 1) {
+        this.map.fitBounds(newBounds);
+      } else {
+        this.map.setZoom(8);
+      }
+    } else {
+      this.visibleMarkers = markers;
 
-		codeAddress( infoWindow ) {
-			let latLng, request = {};
-			let _this = this
+      this.visibleMarkers.map((marker) => {
+        newBounds.extend(marker.getPosition());
+        marker.setMap(this.map);
+      });
 
-			request.address = this.searchInput.value;
+      this.map.fitBounds(newBounds);
+    }
 
-			this.geocoder.geocode( request, function( response, status ) {
-				if ( status == google.maps.GeocoderStatus.OK ) {
-					latLng = response[0].geometry.location;
-					_this.prepareStoreSearch( latLng );
-				} else {
-					console.log('GEOCODER ERROR', status)
-					_this.showVisibleMarkers()
-					// geocodeErrors( status );
-				}
-			});
-		}
+    if (this.visibleMarkers.length == 1) {
+      this.map.setZoom(8);
+    }
 
-		prepareStoreSearch(latLng) {
-			this.map.setCenter(latLng);
-			this.showVisibleMarkers(latLng)
-		}
+    this.prepareListItems(this.visibleMarkers);
+  }
 
-		prepareListItems(elements) {
-			this.storeData = '' // clear
-			this.storeList.innerHTML = ''
+  setInfoWindowContent(
+    _this,
+    marker,
+    infoWindowContent,
+    infoWindow,
+    currentMap
+  ) {
+    infoWindow.setContent(infoWindowContent);
+    infoWindow.open(currentMap, marker);
 
-			for (let index = 0; index < elements.length; index++) {
-				const element = elements[index]?.element;
-				
-				let htmlStore = `
-					<li data-store-id="${element.wpsl_id}">
+    _this.openInfoWindow.push(infoWindow);
+  }
+
+  newInfoWindow() {
+    let infoWindow = new google.maps.InfoWindow();
+
+    return infoWindow;
+  }
+
+  codeAddress(infoWindow) {
+    let latLng,
+      request = {};
+    let _this = this;
+
+    request.address = this.searchInput.value;
+
+    this.geocoder.geocode(request, function (response, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        latLng = response[0].geometry.location;
+        _this.prepareStoreSearch(latLng);
+      } else {
+        console.log("GEOCODER ERROR", status);
+        _this.showVisibleMarkers();
+        // geocodeErrors( status );
+      }
+    });
+  }
+
+  prepareStoreSearch(latLng) {
+    this.map.setCenter(latLng);
+    this.showVisibleMarkers(latLng);
+  }
+
+  prepareListItems(elements) {
+    this.storeData = ""; // clear
+    this.storeList.innerHTML = "";
+
+    for (let index = 0; index < elements.length; index++) {
+      const element = elements[index]?.element;
+
+      const wpsl_id = element?.find((i) => i?.column?.label === "wpsl_id")?.v;
+      const name = element?.find((i) => i?.column?.label === "name")?.v;
+      const url = element?.find((i) => i?.column?.label === "url")?.v;
+      const address = element?.find((i) => i?.column?.label === "address")?.v;
+      const city = element?.find((i) => i?.column?.label === "city")?.v;
+      const state = element?.find((i) => i?.column?.label === "state")?.v;
+      const zip = element?.find((i) => i?.column?.label === "zip")?.v;
+      const phone = element?.find((i) => i?.column?.label === "phone")?.v;
+      let htmlStore = `
+					<li data-store-id="${wpsl_id}">
 						<div class="wpsl-store-location">
 							<p>
-								<strong>${element.name}</strong>
-								<span class="distance">${element.distanceToMile ? element.distanceToMile+' Miles' : ''}</span>
-								<span class="wpsl-street">${element.address}</span>
-								<span>${element.city} ${element.state} ${element.zip}</span>
+								<strong>${name}</strong>
+								<span class="distance">${
+                  element?.distanceToMile
+                    ? element?.distanceToMile + " Miles"
+                    : ""
+                }</span>
+								<span class="wpsl-street">${address}</span>
+								<span>${city} ${state} ${zip}</span>
 							</p>
 							<p class="wpsl-contact-details">
-								<span><a href="tel:${element.phone.replace('(', '').replace(')', '').replace(' ', '').replace('-', '')}">${element.phone}</a></span>
-								<span><a target="_blank" href="${element.url}">${element.url}</a></span>
+								${
+                  phone
+                    ? `<span><a href="tel:${
+                        phone
+                          ? phone
+                              .replace("(", "")
+                              .replace(")", "")
+                              .replace(" ", "")
+                              .replace("-", "")
+                          : ""
+                      }">${phone}</a></span>`
+                    : ""
+                }
+								
+							
 							</p>
-							${element.url ? '<a class="btn" target="_blank" href="'+element.url+'">Contact Dealer <span class="button-arrow"></span></a>' : ''}
+							${
+                url
+                  ? '<a class="btn" target="_blank" href="' +
+                    url +
+                    '">Contact Dealer <span class="button-arrow"></span></a>'
+                  : ""
+              }
 						</div>
 						<div class="note-wrap">Please contact dealer to inquire about which White's Boots products are carried.</div>
 					</li>
 				`;
 
-				this.storeData = this.storeData + htmlStore;
-			}
+      this.storeData = this.storeData + htmlStore;
+    }
 
-			if(elements.length == 0){
-				this.storeData = "<li class='wpsl-no-results-msg'>No results found</li>";
-			}
+    if (elements.length == 0) {
+      this.storeData = "<li class='wpsl-no-results-msg'>No results found</li>";
+    }
 
-			this.storeList.innerHTML = this.storeData;
-		}
+    this.storeList.innerHTML = this.storeData;
   }
-  
-  customElements.define('dealer-locator', DealerLocator);
-  
+}
+
+customElements.define("dealer-locator", DealerLocator);
